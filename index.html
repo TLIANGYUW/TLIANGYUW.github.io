@@ -3,388 +3,355 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026 廣島・岡山 7 天 6 夜行程計畫</title>
+    <title>2026 瀨戶內海環遊之旅 | 廣島・岡山・香川</title>
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --timeline-color: #3498db;
+        }
+
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
             line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f7f6;
-            color: #333;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
         }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #007bff;
-            border-bottom: 3px solid #007bff;
-            padding-bottom: 10px;
-            margin-bottom: 25px;
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 2rem 1rem;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        h2 {
-            color: #28a745;
-            margin-top: 25px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid #ccc;
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
-        h3 {
-            color: #ffc107;
-            margin-top: 20px;
+
+        .day-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-left: 6px solid var(--timeline-color);
         }
-        .pass-info {
-            background-color: #e9f7ff;
-            padding: 15px;
+
+        .day-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .day-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .date {
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+
+        .itinerary-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .itinerary-item {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .time {
+            min-width: 60px;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-right: 1rem;
+        }
+
+        .content b {
+            color: #2980b9;
+        }
+
+        .highlight-box {
+            background: #fff9f1;
+            border: 1px dashed var(--accent-color);
+            padding: 1rem;
             border-radius: 8px;
-            border-left: 5px solid #007bff;
-            margin-bottom: 20px;
-            font-size: 1.1em;
+            margin-top: 1rem;
+            font-size: 0.9rem;
         }
+
+        .transport-badge {
+            display: inline-block;
+            background: #e1f5fe;
+            color: #0277bd;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        .footer-info {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem 1rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 30px;
-            background-color: #fff;
+            margin-top: 1rem;
+            color: white;
+            font-size: 0.9rem;
         }
+
         th, td {
-            padding: 12px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
+            padding: 8px;
+            border-bottom: 1px solid #455a64;
         }
-        th {
-            background-color: #28a745;
-            color: white;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .day-header {
-            background-color: #343a40; /* 深灰色背景 */
-            color: white;
-            font-weight: bold;
-            text-align: center;
-            font-size: 1.1em;
-        }
-        .transport-note {
-            font-style: italic;
-            color: #555;
-            font-size: 0.9em;
-        }
-        .highlight {
-            font-weight: bold;
-            color: #dc3545;
+
+        @media (max-width: 600px) {
+            .day-header { flex-direction: column; align-items: flex-start; }
+            .time { min-width: 50px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🇯🇵 2026 廣島・岡山 7 天 6 夜行程總表 🍑</h1>
-        <p style="text-align: center; font-size: 1.2em; color: #555;">
-            日期：2026/5/17 (日) ~ 5/23 (六) | 交通：JR 山陽&山陰地區鐵路周遊券
-        </p>
 
-        <div class="pass-info">
-            <h2>🚄 交通票券提醒</h2>
-            <p><strong>JR 山陽&山陰地區鐵路周遊券 (7日)</strong></p>
-            <ul>
-                <li><strong>啟用日期：</strong> 2026 年 5 月 17 日 (日)</li>
-                <li><strong>有效期限：</strong> 至 2026 年 5 月 23 日 (六) 結束。</li>
-                <li><strong>不包含：</strong> 機場巴士、路面電車、計程車。</li>
-            </ul>
+<header>
+    <h1>2026 瀨戶內海環遊行程</h1>
+    <p>廣島・吳市・宮島・岡山・倉敷・高松</p>
+</header>
+
+<div class="container">
+
+    <div class="day-card">
+        <div class="day-header">
+            <span class="day-title">Day 1 廣島抵達與和平巡禮</span>
+            <span class="date">2026/05/17 (日)</span>
         </div>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>日期</th>
-                    <th>時間</th>
-                    <th>景點/活動</th>
-                    <th>交通建議 (使用 JR Pass)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="day-header">
-                    <td colspan="4">Day 1：2026/5/17 (日)：廣島抵達與歷史深度</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>10:55</td>
-                    <td>抵達廣島機場 (HIJ)</td>
-                    <td>領取行李、通關</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>12:00 - 13:00</td>
-                    <td>機場巴士 (HIJ → 廣島市區)</td>
-                    <td><span class="transport-note">機場巴士（約 60 分鐘，自費）</span></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>14:30 - 15:00</td>
-                    <td>移動至和平紀念公園</td>
-                    <td>廣島路面電車或步行</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>15:00 - 17:30</td>
-                    <td>**和平紀念資料館** 深度參觀</td>
-                    <td><span class="transport-note">把握參觀時間（約 2.5 小時）</span></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>17:30 - 18:30</td>
-                    <td>**原爆圓頂館**、**和平紀念公園** 戶外參觀</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>19:00</td>
-                    <td>晚餐：享用 **廣島燒**</td>
-                    <td>-</td>
-                </tr>
-                
-                <tr class="day-header" style="background-color:#343a40;">
-                    <td colspan="4">Day 2：2026/5/18 (一)：宮島完美潮汐日 (滿潮 10:10 AM / 乾潮 4:35 PM)</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>08:30 - 09:40</td>
-                    <td>廣島站 → 宮島口 → 宮島</td>
-                    <td><span class="transport-note">JR 山陽本線 → JR 渡輪（JR Pass 涵蓋）</span></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>09:45 - 11:30</td>
-                    <td>**滿潮觀賞 (10:10 AM)**：觀賞**海上漂浮大鳥居**、參觀嚴島神社主殿</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>14:00 - 16:00</td>
-                    <td>彌山纜車（自費）或大聖院參觀</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><span class="highlight">16:00 - 17:30</span></td>
-                    <td>**乾潮觀賞 (4:35 PM)**：**步行至大鳥居底部**、拍照</td>
-                    <td><span class="highlight">潮位極低，把握時機</span></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>17:00 - 18:00</td>
-                    <td>享用 **烤牡蠣** 等在地美食</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>18:00 - 19:00</td>
-                    <td>返回廣島市區</td>
-                    <td><span class="transport-note">JR 渡輪 → JR 山陽本線（JR Pass 涵蓋）</span></td>
-                </tr>
-                
-                <tr class="day-header">
-                    <td colspan="4">Day 3：2026/5/19 (二)：吳市海軍巡禮</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>08:30 - 09:30</td>
-                    <td>廣島站 → 吳市</td>
-                    <td><span class="transport-note">JR 吳線（約 45 分鐘，JR Pass）</span></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>09:30 - 12:30</td>
-                    <td>參觀 **大和博物館** (大和ミュージアム)</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>12:30 - 13:30</td>
-                    <td>午餐：品嚐 **吳海軍咖哩**</td>
-                    <td>博物館周邊</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>13:30 - 15:30</td>
-                    <td>參觀 **海上自衛隊吳史料館**（鐵鯨魚館）</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>16:30 - 17:30</td>
-                    <td>返回廣島市區</td>
-                    <td><span class="transport-note">JR 吳線（約 45 分鐘，JR Pass）</span></td>
-                </tr>
-
-                <tr class="day-header">
-                    <td colspan="4">Day 4：2026/5/20 (三)：廣島 → 岡山、經典庭園與城堡</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>09:30 - 10:30</td>
-                    <td>廣島站 → 岡山站</td>
-                    <td><span class="transport-note">JR 山陽新幹線（約 40 分鐘，JR Pass）</span></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>10:30 - 12:30</td>
-                    <td>岡山飯店 Check-in / 午餐</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>13:00 - 13:30</td>
-                    <td>移動至後樂園 / 岡山城</td>
-                    <td>巴士或路面電車（自費）</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>13:30 - 15:30</td>
-                    <td>參觀 **後樂園**（日本三大名園）</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>15:30 - 17:00</td>
-                    <td>參觀 **岡山城**（烏城）</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>18:30 之後</td>
-                    <td>晚餐及岡山站周邊自由活動</td>
-                    <td>-</td>
-                </tr>
-
-                <tr class="day-header" style="background-color:#343a40;">
-                    <td colspan="4">Day 5：2026/5/21 (四)：倉敷美學與古宅</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>09:00 - 09:45</td>
-                    <td>岡山站 → 倉敷美觀</td>
-                    <td><span class="transport-note">JR 山陽本線（約 17 分鐘，JR Pass）</span></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>09:45 - 12:30</td>
-                    <td>**倉敷美觀地區散策**（運河、白牆街道）</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>13:30 - 15:30</td>
-                    <td>參觀 **舊野崎家宅邸**</td>
-                    <td>步行或短程計程車</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>15:30 - 17:30</td>
-                    <td>倉敷商店街自由活動、咖啡休憩</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>17:30 - 18:00</td>
-                    <td>返回岡山站</td>
-                    <td><span class="transport-note">JR 山陽本線（JR Pass）</span></td>
-                </tr>
-
-                <tr class="day-header" style="background-color:#343a40;">
-                    <td colspan="4">Day 6：2026/5/22 (五)：桃太郎冒險日</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>09:00 - 09:30</td>
-                    <td>岡山站 → 吉備津站</td>
-                    <td><span class="transport-note">JR 吉備線（桃太郎線，JR Pass）</span></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>09:30 - 11:30</td>
-                    <td>參觀 **吉備津神社**（桃太郎傳說起源地）</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>11:30 - 12:00</td>
-                    <td>吉備津站 → 總社站</td>
-                    <td><span class="transport-note">JR 吉備線（JR Pass）</span></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>12:00 - 13:00</td>
-                    <td>午餐：品嚐 **桃太郎蕎麥麵** 或總社周邊美食</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>13:00 - 13:30</td>
-                    <td>總社站 → **鬼城山 (Kinojo)**</td>
-                    <td><span class="transport-note">計程車（約 20 分鐘，自費）</span></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>13:30 - 16:30</td>
-                    <td>參觀 **鬼城山**（古代山城遺址，健行）</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>17:00 - 17:30</td>
-                    <td>返回岡山站</td>
-                    <td><span class="transport-note">JR 吉備線（JR Pass）</span></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>18:30 之後</td>
-                    <td>岡山站周邊享用歡送晚餐</td>
-                    <td>-</td>
-                </tr>
-
-                <tr class="day-header">
-                    <td colspan="4">Day 7：2026/5/23 (六)：岡山機場賦歸</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>09:00 - 12:30</td>
-                    <td>自由活動 / 岡山站周邊最後採購</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>12:30 - 13:00</td>
-                    <td>午餐（岡山站周邊）</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><span class="highlight">13:00</span></td>
-                    <td>**集合並前往機場**</td>
-                    <td><span class="highlight">於岡山站西口搭乘機場巴士（自費）</span></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>14:00</td>
-                    <td>抵達 OKJ，辦理登機手續</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>**15:55**</td>
-                    <td>**班機起飛 → 台北**</td>
-                    <td>-</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="itinerary-list">
+            <div class="itinerary-item">
+                <span class="time">10:55</span>
+                <div class="content"><b>抵達廣島機場</b><br><span class="transport-badge">機場巴士直達市區 (約55分)</span></div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">12:30</span>
+                <div class="content">飯店寄放行李，享用<b>廣島燒午餐</b> (推薦：麗ちゃん/みっちゃん)</div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">14:30</span>
+                <div class="content">參訪<b>平和紀念公園、原爆圓頂屋、資料館</b></div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">17:00</span>
+                <div class="content">備選：縮景園 或 廣島城散策</div>
+            </div>
+        </div>
     </div>
+
+    <div class="day-card">
+        <div class="day-header">
+            <span class="day-title">Day 2 吳市：海上歷史之旅</span>
+            <span class="date">2026/05/18 (一)</span>
+        </div>
+        <div class="itinerary-list">
+            <div class="itinerary-item">
+                <span class="time">09:00</span>
+                <div class="content">廣島站出發<br><span class="transport-badge">JR 吳線 (快速安藝路 Liner) 40分</span></div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">10:00</span>
+                <div class="content"><b>大和博物館、海上自衛隊吳史料館</b> (鐵鯨魚館)</div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">12:30</span>
+                <div class="content">午餐：<b>吳海自咖哩飯</b>、煉瓦通商店街散步</div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">15:00</span>
+                <div class="content">備選：<b>烏小島公園</b> (近距離觀看潛水艇)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="day-card">
+        <div class="day-header">
+            <span class="day-title">Day 3 宮島：雙重潮汐體驗</span>
+            <span class="date">2026/05/19 (二)</span>
+        </div>
+        <div class="itinerary-list">
+            <div class="itinerary-item">
+                <span class="time">09:00</span>
+                <div class="content">前往宮島口<br><span class="transport-badge">JR 山陽本線 + 渡輪</span></div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">10:52</span>
+                <div class="content"><b>【滿潮】嚴島神社參拜</b>、千疊閣 (海上鳥居奇景)</div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">12:30</span>
+                <div class="content">午餐：<b>Kakiya 牡蠣屋</b>、宮島商店街散步</div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">14:30</span>
+                <div class="content">大聖院、紅葉谷公園、五重塔散策</div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">16:35</span>
+                <div class="content"><b>【干潮】步行至大鳥居下方</b>、賞日落</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="day-card">
+        <div class="day-header">
+            <span class="day-title">Day 4 移宿岡山：名園與和食</span>
+            <span class="date">2026/05/20 (三)</span>
+        </div>
+        <div class="itinerary-list">
+            <div class="itinerary-item">
+                <span class="time">09:00</span>
+                <div class="content">移動前往岡山<br><span class="transport-badge">新幹線 (約40分)</span></div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">10:30</span>
+                <div class="content"><b>後樂園、岡山城</b> (烏城)</div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">15:00</span>
+                <div class="content">岡山 AEON Mall 採購、備選：縣立美術館</div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">18:30</span>
+                <div class="content">晚餐：<b>ひとり鍋恵</b> (人氣壽喜燒)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="day-card">
+        <div class="day-header">
+            <span class="day-title">Day 5 倉敷美觀與鷲羽山夕陽</span>
+            <span class="date">2026/05/21 (四)</span>
+        </div>
+        <div class="itinerary-list">
+            <div class="itinerary-item">
+                <span class="time">09:00</span>
+                <div class="content">倉敷美觀地區、阿智神社<br><span class="transport-badge">JR 岡山→倉敷 (17分)</span></div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">14:00</span>
+                <div class="content"><b>租車自駕開始</b> (倉敷取車)</div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">15:00</span>
+                <div class="content">兒島：<b>舊野崎家宅邸</b>、牛仔褲大道</div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">18:30</span>
+                <div class="content"><b>鷲羽山展望台</b> (瀨戶大橋夕景)</div>
+            </div>
+        </div>
+        <div class="highlight-box">
+            💡 <b>本日提醒：</b> 5/21 日落約為 19:10。自駕可待到日落點燈後再回岡山飯店。
+        </div>
+    </div>
+
+    <div class="day-card">
+        <div class="day-header">
+            <span class="day-title">Day 6 吉備路與跨海前往四國</span>
+            <span class="date">2026/05/22 (五)</span>
+        </div>
+        <div class="itinerary-list">
+            <div class="itinerary-item">
+                <span class="time">09:30</span>
+                <div class="content"><b>吉備津神社 (巨大長廊)</b>、吉備津彥神社、宇賀神社</div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">12:30</span>
+                <div class="content">岡山站前還車、車站享用午餐</div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">14:12</span>
+                <div class="content">跨越瀨戶大橋<br><span class="transport-badge">JR 快速 Marine Liner (55分)</span></div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">16:00</span>
+                <div class="content">高松飯店 Check-in、高松港散步</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="day-card">
+        <div class="day-header">
+            <span class="day-title">Day 7 讚岐名園與返程</span>
+            <span class="date">2026/05/23 (六)</span>
+        </div>
+        <div class="itinerary-list">
+            <div class="itinerary-item">
+                <span class="time">09:00</span>
+                <div class="content"><b>栗林公園</b> (一步一景，建議搭乘南湖周遊船)</div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">12:00</span>
+                <div class="content">午餐：高松道地<b>讚岐烏龍麵</b></div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">16:30</span>
+                <div class="content">移動前往機場<br><span class="transport-badge">機場利木津巴士</span></div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">19:05</span>
+                <div class="content"><b>高松機場起飛</b> (台北 20:55 著)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-info">
+        <h3>🧭 行前重點整理</h3>
+        <table>
+            <tr>
+                <th>交通票券</th>
+                <td>推薦：<b>瀨戶內地區鐵路周遊券 (Setouchi Area Pass)</b></td>
+            </tr>
+            <tr>
+                <th>租車資訊</th>
+                <td>5/21 14:00 (倉敷) 取車，5/22 13:00 (岡山) 還車</td>
+            </tr>
+            <tr>
+                <th>網路/導航</th>
+                <td>自駕請備妥手機導航，大目標使用 Mapcode 定位</td>
+            </tr>
+            <tr>
+                <th>備註</th>
+                <td>所有日子設定於 09:00 離開飯店</td>
+            </tr>
+        </table>
+        <p style="text-align: center; margin-top: 2rem; font-size: 0.8rem; opacity: 0.7;">
+            &copy; 2026 瀨戶內海旅行規劃 | 祝您旅途愉快！
+        </p>
+    </div>
+
+</div>
+
 </body>
 </html>
