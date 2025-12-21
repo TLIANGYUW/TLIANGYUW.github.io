@@ -12,6 +12,7 @@
             --card-bg: #ffffff;
             --text-color: #333;
             --timeline-color: #3498db;
+            --save-color: #27ae60;
         }
 
         body {
@@ -26,7 +27,7 @@
         header {
             background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
             color: white;
-            padding: 2rem 1rem;
+            padding: 2.5rem 1rem;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
@@ -78,7 +79,7 @@
         }
 
         .time {
-            min-width: 60px;
+            min-width: 65px;
             font-weight: bold;
             color: var(--accent-color);
             margin-right: 1rem;
@@ -110,7 +111,7 @@
         .footer-info {
             background: #2c3e50;
             color: white;
-            padding: 2rem 1rem;
+            padding: 2rem 1.5rem;
             border-radius: 12px;
             margin-top: 3rem;
         }
@@ -125,8 +126,13 @@
 
         th, td {
             text-align: left;
-            padding: 8px;
+            padding: 10px;
             border-bottom: 1px solid #455a64;
+        }
+
+        .price-tag {
+            color: var(--save-color);
+            font-weight: bold;
         }
 
         @media (max-width: 600px) {
@@ -140,31 +146,30 @@
 <header>
     <h1>2026 瀨戶內海環遊行程</h1>
     <p>廣島・吳市・宮島・岡山・倉敷・高松</p>
+    <div style="margin-top: 10px; font-size: 0.9rem; background: rgba(255,255,255,0.2); display: inline-block; padding: 5px 15px; border-radius: 20px;">
+        💡 交通策略：單買票券 + IC卡 (比週遊券省下約 ¥9,600)
+    </div>
 </header>
 
 <div class="container">
 
     <div class="day-card">
         <div class="day-header">
-            <span class="day-title">Day 1 廣島抵達與和平巡禮</span>
+            <span class="day-title">Day 1 廣島抵達與平和巡禮</span>
             <span class="date">2026/05/17 (日)</span>
         </div>
         <div class="itinerary-list">
             <div class="itinerary-item">
                 <span class="time">10:55</span>
-                <div class="content"><b>抵達廣島機場</b><br><span class="transport-badge">機場巴士直達市區 (約55分)</span></div>
+                <div class="content"><b>抵達廣島機場</b><br><span class="transport-badge">機場巴士：買單程票 (¥1,450)</span></div>
             </div>
             <div class="itinerary-item">
                 <span class="time">12:30</span>
-                <div class="content">飯店寄放行李，享用<b>廣島燒午餐</b> (推薦：麗ちゃん/みっちゃん)</div>
+                <div class="content">飯店寄行李、享用廣島燒午餐 (推薦：麗ちゃん/みっちゃん)</div>
             </div>
             <div class="itinerary-item">
                 <span class="time">14:30</span>
-                <div class="content">參訪<b>平和紀念公園、原爆圓頂屋、資料館</b></div>
-            </div>
-            <div class="itinerary-item">
-                <span class="time">17:00</span>
-                <div class="content">備選：縮景園 或 廣島城散策</div>
+                <div class="content">參訪<b>平和紀念公園、原爆圓頂屋</b><br><span class="transport-badge">市內電車：刷 IC 卡即可</span></div>
             </div>
         </div>
     </div>
@@ -177,19 +182,15 @@
         <div class="itinerary-list">
             <div class="itinerary-item">
                 <span class="time">09:00</span>
-                <div class="content">廣島站出發<br><span class="transport-badge">JR 吳線 (快速安藝路 Liner) 40分</span></div>
+                <div class="content">廣島站出發前往吳站 (約 40 分)<br><span class="transport-badge">JR 吳線：刷 IC 卡進站 (單程 ¥510)</span></div>
             </div>
             <div class="itinerary-item">
                 <span class="time">10:00</span>
-                <div class="content"><b>大和博物館、海上自衛隊吳史料館</b> (鐵鯨魚館)</div>
-            </div>
-            <div class="itinerary-item">
-                <span class="time">12:30</span>
-                <div class="content">午餐：<b>吳海自咖哩飯</b>、煉瓦通商店街散步</div>
+                <div class="content"><b>大和博物館、海上自衛隊吳史料館</b></div>
             </div>
             <div class="itinerary-item">
                 <span class="time">15:00</span>
-                <div class="content">備選：<b>烏小島公園</b> (近距離觀看潛水艇)</div>
+                <div class="content">備選：<b>烏小島公園</b> (潛水艇停泊地)</div>
             </div>
         </div>
     </div>
@@ -202,23 +203,19 @@
         <div class="itinerary-list">
             <div class="itinerary-item">
                 <span class="time">09:00</span>
-                <div class="content">前往宮島口<br><span class="transport-badge">JR 山陽本線 + 渡輪</span></div>
+                <div class="content">廣島 → 宮島口 (JR 25分)<br><span class="transport-badge">刷 IC 卡進站 (單程 ¥420)</span></div>
+            </div>
+            <div class="itinerary-item">
+                <span class="time">10:30</span>
+                <div class="content">搭渡輪前往宮島<br><span class="transport-badge">渡輪可刷 IC 卡 (¥200 + 入島稅 ¥100)</span></div>
             </div>
             <div class="itinerary-item">
                 <span class="time">10:52</span>
-                <div class="content"><b>【滿潮】嚴島神社參拜</b>、千疊閣 (海上鳥居奇景)</div>
-            </div>
-            <div class="itinerary-item">
-                <span class="time">12:30</span>
-                <div class="content">午餐：<b>Kakiya 牡蠣屋</b>、宮島商店街散步</div>
-            </div>
-            <div class="itinerary-item">
-                <span class="time">14:30</span>
-                <div class="content">大聖院、紅葉谷公園、五重塔散策</div>
+                <div class="content"><b>【滿潮】嚴島神社參拜</b>、千疊閣</div>
             </div>
             <div class="itinerary-item">
                 <span class="time">16:35</span>
-                <div class="content"><b>【干潮】步行至大鳥居下方</b>、賞日落</div>
+                <div class="content"><b>【干潮】步行至大鳥居下方</b></div>
             </div>
         </div>
     </div>
@@ -231,20 +228,19 @@
         <div class="itinerary-list">
             <div class="itinerary-item">
                 <span class="time">09:00</span>
-                <div class="content">移動前往岡山<br><span class="transport-badge">新幹線 (約40分)</span></div>
+                <div class="content">廣島 → 岡山 (新幹線 40 分)<br><span class="transport-badge">單買新幹線自由席 (約 ¥5,610)</span></div>
             </div>
             <div class="itinerary-item">
                 <span class="time">10:30</span>
-                <div class="content"><b>後樂園、岡山城</b> (烏城)</div>
-            </div>
-            <div class="itinerary-item">
-                <span class="time">15:00</span>
-                <div class="content">岡山 AEON Mall 採購、備選：縣立美術館</div>
+                <div class="content"><b>後樂園、岡山城</b> (烏城)<br><span class="transport-badge">路面電車：刷 IC 卡即可</span></div>
             </div>
             <div class="itinerary-item">
                 <span class="time">18:30</span>
-                <div class="content">晚餐：<b>ひとり鍋恵</b> (人氣壽喜燒)</div>
+                <div class="content">晚餐：<b>ひとり鍋恵</b> (壽喜燒)</div>
             </div>
+        </div>
+        <div class="highlight-box">
+            💡 <b>新幹線購票建議：</b> 直接在 JR 廣島站自動售票機購買「自由席」車票即可，班次極多不需提前訂位。
         </div>
     </div>
 
@@ -256,23 +252,16 @@
         <div class="itinerary-list">
             <div class="itinerary-item">
                 <span class="time">09:00</span>
-                <div class="content">倉敷美觀地區、阿智神社<br><span class="transport-badge">JR 岡山→倉敷 (17分)</span></div>
+                <div class="content">岡山 → 倉敷<br><span class="transport-badge">JR 刷 IC 卡 (單程 ¥330)</span></div>
             </div>
             <div class="itinerary-item">
                 <span class="time">14:00</span>
-                <div class="content"><b>租車自駕開始</b> (倉敷取車)</div>
-            </div>
-            <div class="itinerary-item">
-                <span class="time">15:00</span>
-                <div class="content">兒島：<b>舊野崎家宅邸</b>、牛仔褲大道</div>
+                <div class="content"><b>租車自駕：倉敷站取車</b></div>
             </div>
             <div class="itinerary-item">
                 <span class="time">18:30</span>
                 <div class="content"><b>鷲羽山展望台</b> (瀨戶大橋夕景)</div>
             </div>
-        </div>
-        <div class="highlight-box">
-            💡 <b>本日提醒：</b> 5/21 日落約為 19:10。自駕可待到日落點燈後再回岡山飯店。
         </div>
     </div>
 
@@ -284,20 +273,19 @@
         <div class="itinerary-list">
             <div class="itinerary-item">
                 <span class="time">09:30</span>
-                <div class="content"><b>吉備津神社 (巨大長廊)</b>、吉備津彥神社、宇賀神社</div>
+                <div class="content"><b>吉備津神社、吉備津彥神社 (自駕)</b></div>
             </div>
             <div class="itinerary-item">
                 <span class="time">12:30</span>
-                <div class="content">岡山站前還車、車站享用午餐</div>
+                <div class="content">岡山站前還車</div>
             </div>
             <div class="itinerary-item">
                 <span class="time">14:12</span>
-                <div class="content">跨越瀨戶大橋<br><span class="transport-badge">JR 快速 Marine Liner (55分)</span></div>
+                <div class="content">搭乘 <b>快速 Marine Liner</b> 前往高松<br><span class="transport-badge">單買車票 (¥1,660)</span></div>
             </div>
-            <div class="itinerary-item">
-                <span class="time">16:00</span>
-                <div class="content">高松飯店 Check-in、高松港散步</div>
-            </div>
+        </div>
+        <div class="highlight-box">
+            💡 <b>Marine Liner 小提醒：</b> 若想坐雙層車廂上層看海景，請在櫃檯或售票機加購「指定席」或「綠色席」。
         </div>
     </div>
 
@@ -309,37 +297,33 @@
         <div class="itinerary-list">
             <div class="itinerary-item">
                 <span class="time">09:00</span>
-                <div class="content"><b>栗林公園</b> (一步一景，建議搭乘南湖周遊船)</div>
-            </div>
-            <div class="itinerary-item">
-                <span class="time">12:00</span>
-                <div class="content">午餐：高松道地<b>讚岐烏龍麵</b></div>
+                <div class="content"><b>栗林公園</b> (一步一景)</div>
             </div>
             <div class="itinerary-item">
                 <span class="time">16:30</span>
-                <div class="content">移動前往機場<br><span class="transport-badge">機場利木津巴士</span></div>
+                <div class="content">高松站前往機場<br><span class="transport-badge">機場巴士：買單程票 (約 ¥1,000)</span></div>
             </div>
             <div class="itinerary-item">
                 <span class="time">19:05</span>
-                <div class="content"><b>高松機場起飛</b> (台北 20:55 著)</div>
+                <div class="content"><b>高松機場起飛</b></div>
             </div>
         </div>
     </div>
 
     <div class="footer-info">
-        <h3>🧭 行前重點整理</h3>
+        <h3>🧭 交通結算 & 重點整理</h3>
         <table>
             <tr>
-                <th>交通票券</th>
-                <td>推薦：<b>瀨戶內地區鐵路周遊券 (Setouchi Area Pass)</b></td>
+                <th>交通方式</th>
+                <td>全程使用 <b>IC 卡 (ICOCA/Suica) + 單買長程票</b></td>
+            </tr>
+            <tr>
+                <th>估計總花費</th>
+                <td>約 <b>¥12,400</b> <span class="price-tag">(比週遊券 ¥22,000 省下 ¥9,600)</span></td>
             </tr>
             <tr>
                 <th>租車資訊</th>
                 <td>5/21 14:00 (倉敷) 取車，5/22 13:00 (岡山) 還車</td>
-            </tr>
-            <tr>
-                <th>網路/導航</th>
-                <td>自駕請備妥手機導航，大目標使用 Mapcode 定位</td>
             </tr>
             <tr>
                 <th>備註</th>
