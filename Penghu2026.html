@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澎湖三日遊：風景秘境與喜宴巡禮</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        body { 
+            font-family: 'Noto Sans TC', sans-serif; 
+            background-color: #f8fafc; 
+            -webkit-tap-highlight-color: transparent;
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.4s ease-out; }
+        .active-tab { 
+            background-color: #0284c7; 
+            color: white !important; 
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .route-step::before { 
+            content: ''; position: absolute; left: 16px; top: 32px; 
+            width: 2px; height: calc(100% - 16px); background: #e2e8f0;
+        }
+        .route-step:last-child::before { display: none; }
+        input[type="checkbox"]:checked + label {
+            text-decoration: line-through;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body class="text-slate-800 pb-20">
+
+    <!-- Hero Header -->
+    <header class="bg-gradient-to-br from-blue-700 via-sky-600 to-cyan-500 text-white py-16 px-6 shadow-xl relative overflow-hidden text-center">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <span class="inline-block bg-white/20 px-4 py-1 rounded-full text-xs font-bold tracking-[0.2em] mb-4 border border-white/30">PENGHU SCENIC GUIDE</span>
+            <h1 class="text-4xl md:text-5xl font-black mb-6 drop-shadow-lg text-balance">澎湖：絕美秘境與喜宴巡禮</h1>
+            <div class="flex flex-wrap justify-center items-center gap-6 text-sky-50 text-sm">
+                <div class="flex items-center"><i class="fa-solid fa-hotel mr-2"></i>精選海景住宿</div>
+                <div class="flex items-center"><i class="fa-solid fa-camera mr-2"></i>西嶼秘境 + 南環海岸</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="sticky top-0 z-50 px-4 -mt-8">
+        <div class="max-w-4xl mx-auto bg-white/95 backdrop-blur-md p-1.5 rounded-3xl shadow-2xl flex gap-1 border border-white/50">
+            <button onclick="openTab(event, 'day1')" class="tab-link flex-1 py-4 px-2 text-center font-bold rounded-2xl transition-all duration-300 text-slate-500 active-tab text-sm">D1 秘境巡航</button>
+            <button onclick="openTab(event, 'day2')" class="tab-link flex-1 py-4 px-2 text-center font-bold rounded-2xl transition-all duration-300 text-slate-500 text-sm">D2 市區盛典</button>
+            <button onclick="openTab(event, 'day3')" class="tab-link flex-1 py-4 px-2 text-center font-bold rounded-2xl transition-all duration-300 text-slate-500 text-sm">D3 漫步海岸</button>
+            <button onclick="openTab(event, 'map')" class="tab-link w-14 py-4 px-2 text-center font-bold rounded-2xl transition-all duration-300 text-slate-500"><i class="fa-solid fa-map"></i></button>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto p-4 mt-8">
+        
+        <!-- Day 1: 西嶼絕美秘境 -->
+        <section id="day1" class="tab-content active space-y-6">
+            <div class="bg-white rounded-[2.5rem] shadow-sm p-8 border border-slate-100">
+                <div class="mb-10">
+                    <h2 class="text-3xl font-black text-slate-900 mb-2">D1：西嶼深度秘境</h2>
+                    <p class="text-slate-500 text-sm">專注於西嶼最難得一見的自然景觀</p>
+                </div>
+                
+                <div class="space-y-0">
+                    <div class="route-step relative pl-12 pb-10">
+                        <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-sky-500 flex items-center justify-center z-10 text-white text-xs"><i class="fa-solid fa-car"></i></div>
+                        <div class="flex flex-col">
+                            <span class="text-xs font-bold text-sky-600 mb-1">09:30</span>
+                            <label class="font-bold text-lg">馬公機場取車 -> 西嶼公路旅行</label>
+                        </div>
+                    </div>
+
+                    <div class="route-step relative pl-12 pb-10">
+                        <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center z-10 text-white text-xs"><i class="fa-solid fa-camera"></i></div>
+                        <div class="flex flex-col">
+                            <span class="text-xs font-bold text-amber-600 mb-1">上午秘境點</span>
+                            <label class="font-bold text-lg text-amber-900">番黍仔尾嶼 & 雲朵盪鞦韆</label>
+                            <p class="text-xs text-slate-500 mt-1 italic">享受湛藍海平面與超夢幻鞦韆打卡點。</p>
+                        </div>
+                    </div>
+
+                    <div class="route-step relative pl-12 pb-10">
+                        <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center z-10 text-slate-400 text-xs"><i class="fa-solid fa-utensils"></i></div>
+                        <div class="flex flex-col">
+                            <span class="text-xs font-bold text-slate-400 mb-1">12:30 午餐</span>
+                            <label class="font-bold text-lg">美東芳牛肉麵 (或在地特色小吃)</label>
+                        </div>
+                    </div>
+
+                    <div class="route-step relative pl-12 pb-10">
+                        <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center z-10 text-white text-xs"><i class="fa-solid fa-person-hiking"></i></div>
+                        <div class="flex flex-col">
+                            <span class="text-xs font-bold text-emerald-600 mb-1">下午探索</span>
+                            <label class="font-bold text-lg text-emerald-900">攀岩下切秘境貝殼沙灘</label>
+                            <p class="text-xs text-slate-500 mt-1 italic">需要一點體力的下切段，換取最純淨的無人沙灘。</p>
+                        </div>
+                    </div>
+
+                    <div class="route-step relative pl-12 pb-10">
+                        <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center z-10 text-white text-xs"><i class="fa-solid fa-sun"></i></div>
+                        <div class="flex flex-col">
+                            <span class="text-xs font-bold text-orange-600 mb-1">夕陽時分</span>
+                            <label class="font-bold text-lg">夢幻沙灘賞日落</label>
+                            <p class="text-xs text-slate-500 mt-1 italic">看著夕陽消失在海平面上，為第一天畫下完美句點。</p>
+                        </div>
+                    </div>
+
+                    <div class="route-step relative pl-12">
+                        <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center z-10 text-white text-xs"><i class="fa-solid fa-hotel"></i></div>
+                        <div class="flex flex-col">
+                            <span class="text-xs font-bold text-slate-400 mb-1">辦理入住</span>
+                            <label class="font-bold text-lg">抵達飯店 / 辦理入住手續</label>
+                            <p class="text-xs text-slate-500 mt-1 italic">稍作休息，享受夜晚時光。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Day 2: 喜宴與花火 -->
+        <section id="day2" class="tab-content space-y-6">
+            <div class="bg-white rounded-[2.5rem] shadow-sm p-8 border border-slate-100">
+                <h2 class="text-3xl font-black text-slate-900 mb-8">D2：城市漫遊與喜慶盛典</h2>
+                
+                <div class="space-y-6">
+                    <div class="p-6 bg-sky-50 rounded-3xl border border-sky-100">
+                        <span class="text-xs font-bold text-sky-600 uppercase tracking-widest">Natural Wonder</span>
+                        <h3 class="font-bold text-xl mt-1">奎壁山摩西分海</h3>
+                        <p class="text-sm text-slate-500 mt-1 italic">需依潮汐時間前往，體驗大海中開出一條路的震撼感。</p>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">City Walk</span>
+                        <h3 class="font-bold text-xl mt-1">文康街 / 中央老街 / 天后宮</h3>
+                        <p class="text-sm text-slate-500 mt-1 italic">自由漫步馬公市區，感受老街氣息與特色建築。</p>
+                    </div>
+
+                    <!-- Highlight: Wedding -->
+                    <div class="bg-gradient-to-r from-rose-500 to-red-600 p-8 rounded-[2rem] text-white shadow-xl relative overflow-hidden">
+                        <div class="relative z-10">
+                            <span class="text-[10px] font-black tracking-widest bg-white/20 px-3 py-1 rounded-full mb-4 inline-block uppercase">Wedding Event</span>
+                            <h3 class="text-2xl font-black mb-1">盛大婚宴慶典</h3>
+                            <p class="text-rose-100 text-sm mb-6 font-medium"><i class="fa-solid fa-clock mr-2"></i> 18:00 正式開席</p>
+                            
+                            <div class="bg-white/10 p-4 rounded-2xl border border-white/20">
+                                <h4 class="font-bold text-sm mb-1">觀音亭晚會煙火</h4>
+                                <p class="text-[10px] text-rose-50">婚宴前後可前往觀音亭觀賞璀璨的花火節煙火。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Day 3: 南環海岸巡禮 -->
+        <section id="day3" class="tab-content space-y-6">
+            <div class="bg-white rounded-[2.5rem] shadow-sm p-8 border border-slate-100">
+                <h2 class="text-3xl font-black text-emerald-900 mb-8">D3：南環海岸線巡禮</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                        <h4 class="font-bold text-emerald-800 mb-2">蛇頭山遊憩區</h4>
+                        <p class="text-xs text-slate-500">擁有豐富歷史意義的制高點，俯瞰馬公港全景。</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                        <h4 class="font-bold text-emerald-800 mb-2">風櫃洞 / 情人灣</h4>
+                        <p class="text-xs text-slate-500">觀賞著名的噴水奇觀，並在安靜的情人灣沙灘慢行。</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                        <h4 class="font-bold text-emerald-800 mb-2">嵵裡沙灘 / 山水沙灘</h4>
+                        <p class="text-xs text-slate-500">澎湖最美的兩大弧形金黃沙灘，純淨而療癒。</p>
+                    </div>
+                    <div class="p-6 bg-indigo-900 text-white rounded-3xl border border-slate-100 relative overflow-hidden">
+                        <div class="absolute right-0 top-0 p-4 opacity-20"><i class="fa-solid fa-star"></i></div>
+                        <h4 class="font-bold mb-2">山水 30 高地公園</h4>
+                        <p class="text-xs text-slate-300 italic">置身制高點俯瞰海岸線，捕捉離港前最後的海藍色美景。</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 p-8 bg-slate-900 rounded-[2rem] text-white flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+                    <div>
+                        <span class="text-emerald-400 font-bold text-xs uppercase tracking-tighter">Departure Time</span>
+                        <h3 class="text-2xl font-black mt-1">16:10 歸還租車</h3>
+                        <p class="text-slate-400 text-sm mt-1">抵達機場辦理報到手續</p>
+                    </div>
+                    <div class="bg-white text-slate-900 px-8 py-4 rounded-2xl font-black text-lg shadow-xl">
+                        17:40 華信離境
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Tab -->
+        <section id="map" class="tab-content space-y-6">
+            <div class="bg-white rounded-[2.5rem] shadow-sm p-8 border border-slate-100">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-2"><i class="fa-solid fa-location-arrow"></i> 秘境導航提醒</h2>
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="border-l-4 border-amber-500 pl-4 py-2">
+                        <h3 class="font-bold">開車直達版貝殼海灘</h3>
+                        <p class="text-sm text-slate-500">導航至「西嶼后厝」周邊小徑，車輛可直抵邊緣，不需下切攀岩。</p>
+                    </div>
+                    <div class="border-l-4 border-sky-500 pl-4 py-2">
+                        <h3 class="font-bold">夢幻沙灘 (網垵沙灘)</h3>
+                        <p class="text-sm text-slate-500">西嶼最佳賞落日點，請留意潮汐，退潮時沙灘面積最廣。</p>
+                    </div>
+                    <div class="border-l-4 border-emerald-500 pl-4 py-2">
+                        <h3 class="font-bold">山水 30 高地</h3>
+                        <p class="text-sm text-slate-500">位於山水沙灘旁的高台，設有觀景步道，視野極佳。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rounded-[2rem] overflow-hidden shadow-2xl h-80 border-4 border-white">
+                <iframe width="100%" height="100%" frameborder="0" src="https://maps.google.com/maps?saddr=馬公機場&daddr=西嶼燈塔+to:馬公港+to:山水沙灘+to:馬公機場&output=embed"></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-10 text-slate-400 text-[10px] tracking-[0.3em] uppercase">
+        Explore Penghu • Scenic Edition • 2024
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-tab");
+            }
+            
+            const targetContent = document.getElementById(tabName);
+            if (targetContent) {
+                targetContent.classList.add("active");
+                evt.currentTarget.classList.add("active-tab");
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

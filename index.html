@@ -1,590 +1,104 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
-
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>廣島・岡山・香川之旅 2026｜七日自由行完整攻略</title>
-
+    <title>我的旅遊行程手冊</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #006E7F;
-            --secondary-color: #B22222;
-            --rain-color: #5F7C8A;
-            --tip-color: #F5A623;
-            --transport-color: #27ae60;
-            --food-color: #d35400;
-            --bg-light: #f8f9fa;
-            --text-dark: #333;
-            --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+        body { 
+            font-family: 'Noto Sans TC', sans-serif;
+            background: #f1f5f9;
         }
-
-        body {
-            font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: #f0f2f5;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(135deg, var(--primary-color), #00a8c6);
-            color: white;
-            border-radius: 0 0 30px 30px;
-            margin-bottom: 30px;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-            letter-spacing: 2px;
-        }
-
-        header p {
-            margin: 10px 0 0;
-            opacity: 0.9;
-            font-size: 1.1rem;
-        }
-
-        .day-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            margin-bottom: 40px;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .day-header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 15px 25px;
-        }
-
-        .day-header h2 {
-            margin: 0;
-            font-size: 1.4rem;
-        }
-
-        .day-logistics {
-            background-color: #f8f9fa;
-            padding: 12px 25px;
-            font-size: 0.95rem;
-            color: #666;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .day-image-container {
-            width: 100%;
-            background-color: #eee;
-            line-height: 0;
-        }
-
-        .day-image-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .day-content {
-            padding: 25px;
-        }
-
-        .block {
-            margin-bottom: 25px;
-            padding-left: 15px;
-            border-left: 5px solid #ddd;
-        }
-
-        .block h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-        }
-
-        /* 各區塊顏色 */
-        .block.transport {
-            border-left-color: var(--transport-color);
-        }
-
-        .block.transport h3 {
-            color: var(--transport-color);
-        }
-
-        .block.main {
-            border-left-color: var(--primary-color);
-        }
-
-        .block.main h3 {
-            color: var(--primary-color);
-        }
-
-        .block.food {
-            border-left-color: var(--food-color);
-        }
-
-        .block.food h3 {
-            color: var(--food-color);
-        }
-
-        .block.rain {
-            border-left-color: var(--rain-color);
-            background-color: #f4f8fb;
-            padding: 15px;
-            border-radius: 0 10px 10px 0;
-        }
-
-        .block.rain h3 {
-            color: var(--rain-color);
-        }
-
-        ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .highlight {
-            color: var(--secondary-color);
-            font-weight: bold;
-        }
-
-        .price-note {
-            font-size: 0.85rem;
-            color: #777;
-            font-style: italic;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: #888;
-            font-size: 0.9rem;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-
-        th,
-        td {
-            padding: 10px;
-            border-bottom: 1px solid #eee;
-            text-align: left;
+        .travel-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
     </style>
 </head>
+<body class="min-h-screen flex flex-col">
 
-<body>
-
-    <header>
-        <div class="container">
-            <h1>廣島・岡山・香川之旅</h1>
-            <p>📅 2026.05.17 — 05.23 (七日自由行)</p>
-            <p
-                style="font-size: 0.9rem; margin-top:15px; background:rgba(0,0,0,0.2); display:inline-block; padding:5px 15px; border-radius:20px;">
-                💡 策略：單買票券 + IC卡 (比週遊券省下約 ¥9,600)
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-sky-500 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+        </div>
+        
+        <div class="max-w-5xl mx-auto relative z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-black mb-6 tracking-tight">旅遊行程手冊</h1>
+            <p class="text-sky-200 text-lg md:text-xl font-light max-w-2xl mx-auto">
+                收錄每一次出發的驚喜與回憶，探索台灣外島的湛藍與日本秘境的風情。
             </p>
         </div>
     </header>
 
-    <div class="container">
+    <!-- Main Content -->
+    <main class="flex-grow max-w-6xl mx-auto w-full p-6 -mt-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Card 1: Penghu -->
+            <div class="travel-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
+                <div class="h-48 bg-gradient-to-r from-sky-400 to-blue-600 flex items-center justify-center relative">
+                    <i class="fa-solid fa-umbrella-beach text-white text-7xl opacity-30 absolute right-6"></i>
+                    <div class="text-center z-10">
+                        <span class="bg-white/20 text-white text-[10px] font-black tracking-widest px-3 py-1 rounded-full uppercase border border-white/30">Taiwan</span>
+                        <h2 class="text-3xl font-black text-white mt-2">澎湖秘境之旅</h2>
+                    </div>
+                </div>
+                <div class="p-8 flex-grow">
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                        三日精選行程。包含西嶼下切貝殼沙灘秘境、摩西分海、以及南環絕美海岸線。結合了浪漫婚宴與夏日花火節的璀璨回憶。
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="bg-slate-50 text-slate-500 text-xs px-3 py-1 rounded-full">#三天兩夜</span>
+                        <span class="bg-slate-50 text-slate-500 text-xs px-3 py-1 rounded-full">#自駕秘境</span>
+                        <span class="bg-slate-50 text-slate-500 text-xs px-3 py-1 rounded-full">#海景</span>
+                    </div>
+                    <a href="Penghu2026.html" class="block w-full text-center bg-sky-600 hover:bg-sky-700 text-white font-bold py-4 rounded-2xl transition-colors shadow-lg shadow-sky-100">
+                        開啟澎湖手冊 <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
 
-        <div class="day-card">
-            <div class="day-header">
-                <h2>📅 5/17（日）廣島：和平巡禮</h2>
-            </div>
-            <div class="day-logistics"><span>🕘 12:30 飯店寄放行李後開始</span></div>
-            <div class="day-image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Atomic_Bomb_Dome_and_Motoyaso_River%2C_Hiroshima%2C_Northwest_view_20190417_1_%28bannerportadaesvoy%29.jpg/2560px-Atomic_Bomb_Dome_and_Motoyaso_River%2C_Hiroshima%2C_Northwest_view_20190417_1_%28bannerportadaesvoy%29.jpg"
-                    alt="廣島原爆圓頂屋">
-            </div>
-            <div class="day-content">
-                <div class="block transport">
-                    <h3>🟢 交通動線</h3>
-                    <ul>
-                        <li>機場巴士：廣島機場 → 廣島車站/巴士中心 <span class="price-note">(¥1,450 / 55分)</span></li>
-                        <li>市區移動：廣島路面電車 (廣電) <span class="price-note">(刷 IC 卡)</span></li>
-                    </ul>
+            <!-- Card 2: Japan -->
+            <div class="travel-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
+                <div class="h-48 bg-gradient-to-r from-emerald-400 to-teal-600 flex items-center justify-center relative">
+                    <i class="fa-solid fa-torii-gate text-white text-7xl opacity-30 absolute right-6"></i>
+                    <div class="text-center z-10">
+                        <span class="bg-white/20 text-white text-[10px] font-black tracking-widest px-3 py-1 rounded-full uppercase border border-white/30">Japan</span>
+                        <h2 class="text-3xl font-black text-white mt-2">廣島岡山自由行</h2>
+                    </div>
                 </div>
-                <div class="block main">
-                    <h3>🔵 景點安排</h3>
-                    <ul>
-                        <li><span class="highlight">和平紀念公園、原爆圓頂屋</span></li>
-                        <li>和平紀念資料館 (建議預留 2 小時)</li>
-                        <li>本通商店街散策</li>
-                    </ul>
-                </div>
-                <div class="block food">
-                    <h3>🔴 美食推薦</h3>
-                    <ul>
-                        <li>晚餐：<span class="highlight">廣島燒</span> (推薦：麗ちゃん 或 みっちゃん)</li>
-                    </ul>
-                </div>
-                <div class="block rain">
-                    <h3>🌧️ 雨備方案</h3>
-                    <ul>
-                        <li>廣島紙鶴塔 (室內觀景)、SOGO/新天地室內商店街。</li>
-                    </ul>
+                <div class="p-8 flex-grow">
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                        七日深度巡禮。橫跨廣島和平紀念公園、宮島海上鳥居、岡山後樂園與高松栗林公園。極致精算的交通攻略與在地美食地圖。
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="bg-slate-50 text-slate-500 text-xs px-3 py-1 rounded-full">#七天六夜</span>
+                        <span class="bg-slate-50 text-slate-500 text-xs px-3 py-1 rounded-full">#新幹線</span>
+                        <span class="bg-slate-50 text-slate-500 text-xs px-3 py-1 rounded-full">#深度攻略</span>
+                    </div>
+                    <a href="HiroshimaOkayama2026.html" class="block w-full text-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-2xl transition-colors shadow-lg shadow-emerald-100">
+                        開啟日本手冊 <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
             </div>
+
         </div>
+    </main>
 
-        <div class="day-card">
-            <div class="day-header">
-                <h2>📅 5/18（一）吳市：海上歷史</h2>
-            </div>
-            <div class="day-logistics"><span>🕘 09:00 廣島站出發</span></div>
-            <div class="day-image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/%E5%A4%A7%E5%92%8C%E5%8D%9A%E7%89%A9%E9%A4%A8_%2848118314502%29.jpg/960px-%E5%A4%A7%E5%92%8C%E5%8D%9A%E7%89%A9%E9%A4%A8_%2848118314502%29.jpg"
-                    alt="吳市大和博物館">
-            </div>
-            <div class="day-content">
-                <div class="block transport">
-                    <h3>🟢 交通動線</h3>
-                    <ul>
-                        <li>JR 吳線快速 (安藝路 Liner)：廣島 → 吳 <span class="price-note">(刷 IC 卡單程 ¥510)</span></li>
-                    </ul>
-                </div>
-                <div class="block main">
-                    <h3>🔵 景點安排</h3>
-                    <ul>
-                        <li><span class="highlight">大和博物館</span> (1/10 戰艦模型)</li>
-                        <li>鐵鯨魚館 (海上自衛隊史料館)</li>
-                        <li>入船山紀念館 / 烏小島公園 (看潛水艇)</li>
-                    </ul>
-                </div>
-                <div class="block food">
-                    <h3>🔴 美食推薦</h3>
-                    <ul>
-                        <li>午餐：<span class="highlight">吳海自咖哩</span> (車站附近或博物館旁)</li>
-                        <li>點心：珍來軒 吳冷麵 (在地名物)</li>
-                    </ul>
-                </div>
-                <div class="block rain">
-                    <h3>🌧️ 雨備方案</h3>
-                    <ul>
-                        <li>大和博物館與鐵鯨魚館皆為全室內，受天氣影響小。取消烏小島公園戶外行程。</li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Footer -->
+    <footer class="text-center py-12 text-slate-400">
+        <div class="flex justify-center gap-6 mb-4 text-slate-300">
+            <i class="fa-solid fa-plane"></i>
+            <i class="fa-solid fa-map"></i>
+            <i class="fa-solid fa-camera"></i>
         </div>
-
-        <div class="day-card">
-            <div class="day-header">
-                <h2>📅 5/19（二）宮島：嚴島神社</h2>
-            </div>
-            <div class="day-logistics"><span>🌊 滿潮 10:52 / 干潮 16:35</span></div>
-            <div class="day-image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Itsukushima_Shrine_%2C_%E5%8E%B3%E5%B3%B6%E7%A5%9E%E7%A4%BE_-_panoramio_%284%29.jpg"
-                    alt="嚴島神社">
-            </div>
-            <div class="day-content">
-                <div class="block transport">
-                    <h3>🟢 交通動線</h3>
-                    <ul>
-                        <li>JR 山陽本線：廣島 → 宮島口 <span class="price-note">(¥420)</span></li>
-                        <li>渡輪：宮島口 → 宮島 <span class="price-note">(¥200 + 入島稅 ¥100，可刷 IC 卡)</span></li>
-                    </ul>
-                </div>
-                <div class="block main">
-                    <h3>🔵 景點安排</h3>
-                    <ul>
-                        <li><span class="highlight">11:00 前後：滿潮參拜神社</span>，拍海上鳥居。</li>
-                        <li>千疊閣、五重塔、紅葉谷公園。</li>
-                        <li><span class="highlight">16:30 後：干潮步行至大鳥居下方</span>。</li>
-                    </ul>
-                </div>
-                <div class="block food">
-                    <h3>🔴 美食推薦</h3>
-                    <ul>
-                        <li><span class="highlight">牡蠣屋 Kakiya</span> 或 燒牡蠣攤位。</li>
-                        <li>紅葉饅頭 (推薦炸紅葉饅頭)、穴子魚飯。</li>
-                    </ul>
-                </div>
-                <div class="block rain">
-                    <h3>🌧️ 雨備方案</h3>
-                    <ul>
-                        <li>嚴島神社迴廊有遮雨，大聖院室內空間多；可縮減紅葉谷公園步道行程。</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="day-card">
-            <div class="day-header">
-                <h2>📅 5/20（三）廣島 → 岡山</h2>
-            </div>
-            <div class="day-logistics"><span>🚄 預計搭乘 09:30 新幹線</span></div>
-            <div class="day-image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Okayama_Korakuen_Garden01.jpg"
-                    alt="岡山後樂園">
-            </div>
-            <div class="day-content">
-                <div class="block transport">
-                    <h3>🟢 交通動線</h3>
-                    <ul>
-                        <li>新幹線：廣島 → 岡山 <span class="price-note">(單買自由席約 ¥5,610，40分)</span></li>
-                        <li>路面電車：岡山站前 → 城下站 <span class="price-note">(刷 IC 卡)</span></li>
-                    </ul>
-                </div>
-                <div class="block main">
-                    <h3>🔵 景點安排</h3>
-                    <ul>
-                        <li><span class="highlight">岡山後樂園</span> (日本三名園)</li>
-                        <li>岡山城 (烏城)</li>
-                        <li>岡山 AEON Mall (全日本最大級) 購物。</li>
-                    </ul>
-                </div>
-                <div class="block food">
-                    <h3>🔴 美食推薦</h3>
-                    <ul>
-                        <li>晚餐：<span class="highlight">ひとり鍋恵</span> (人氣壽喜燒/火鍋)</li>
-                        <li>岡山水果：白桃或晴王麝香葡萄甜點。</li>
-                    </ul>
-                </div>
-                <div class="block rain">
-                    <h3>🌧️ 雨備方案</h3>
-                    <ul>
-                        <li>後樂園風景受限時，增加岡山縣立美術館或專攻岡山車站旁 AEON Mall。</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="day-card">
-            <div class="day-header">
-                <h2>📅 5/21（四）倉敷與鷲羽山夕陽</h2>
-            </div>
-            <div class="day-logistics"><span>🚗 14:00 倉敷站前取車自駕</span></div>
-            <div class="day-image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/161015_At_Kurashiki_Bikan_historical_quarter_Kurashiki_Okayama_pref_Japan02s3.jpg/960px-161015_At_Kurashiki_Bikan_historical_quarter_Kurashiki_Okayama_pref_Japan02s3.jpg"
-                    alt="倉敷美觀">
-            </div>
-            <div class="day-content">
-                <div class="block transport">
-                    <h3>🟢 交通動線</h3>
-                    <ul>
-                        <li>JR 山陽本線：岡山 → 倉敷 <span class="price-note">(¥330)</span></li>
-                        <li><span class="highlight">自駕開始：</span>倉敷 → 兒島 → 鷲羽山 → 岡山。</li>
-                    </ul>
-                </div>
-                <div class="block main">
-                    <h3>🔵 景點安排</h3>
-                    <ul>
-                        <li><span class="highlight">倉敷美觀地區</span> (白壁土藏建築群)</li>
-                        <li>兒島牛仔褲大道、舊野崎家宅邸。</li>
-                        <li><span class="highlight">鷲羽山展望台：</span>瀨戶大橋夕陽絕景 (日落約 19:10)。</li>
-                    </ul>
-                </div>
-                <div class="block food">
-                    <h3>🔴 美食推薦</h3>
-                    <ul>
-                        <li>倉敷：有鄰庵 (生雞蛋拌飯/微笑布丁)。</li>
-                        <li>兒島：與島停車場 (瀨戶內海景觀餐廳)。</li>
-                    </ul>
-                </div>
-                <div class="block rain">
-                    <h3>🌧️ 雨備方案</h3>
-                    <ul>
-                        <li><span class="highlight">大原美術館</span> (倉敷美觀區內)、倉敷 Ivy Square。取消鷲羽山夕陽。</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="day-card">
-            <div class="day-header">
-                <h2>📅 5/22（五）吉備路 → 高松</h2>
-            </div>
-            <div class="day-logistics"><span>🚗 12:30 岡山站前還車</span></div>
-            <div class="day-image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/%E5%90%89%E5%82%99%E6%B4%A5%E7%A5%9E%E7%A4%BE_-_panoramio.jpg/960px-%E5%90%89%E5%82%99%E6%B4%A5%E7%A5%9E%E7%A4%BE_-_panoramio.jpg"
-                    alt="吉備津神社">
-            </div>
-            <div class="day-content">
-                <div class="block transport">
-                    <h3>🟢 交通動線</h3>
-                    <ul>
-                        <li>自駕：岡山 → 吉備路 → 岡山還車。</li>
-                        <li>JR 快速 Marine Liner：岡山 → 高松 <span class="price-note">(¥1,660，跨越瀨戶大橋)</span></li>
-                    </ul>
-                </div>
-                <div class="block main">
-                    <h3>🔵 景點安排</h3>
-                    <ul>
-                        <li><span class="highlight">吉備津神社</span> (400公尺絕美木製長廊)</li>
-                        <li>吉備津彥神社 (桃太郎故事起源)。</li>
-                        <li>傍晚：高松港散步、高松地標塔看夜景。</li>
-                    </ul>
-                </div>
-                <div class="block food">
-                    <h3>🔴 美食推薦</h3>
-                    <ul>
-                        <li>午餐：岡山車站備前拉麵。</li>
-                        <li>晚餐：<span class="highlight">高松骨付鳥</span> (推薦：一鶴 Ikkaku)。</li>
-                    </ul>
-                </div>
-                <div class="block rain">
-                    <h3>🌧️ 雨備方案</h3>
-                    <ul>
-                        <li>高松站旁擁有全日本最長的「全覆蓋式」商店街，適合雨天逛街吃美食。</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="day-card">
-            <div class="day-header">
-                <h2>📅 5/23（六）高松名園・返程</h2>
-            </div>
-            <div class="day-logistics"><span>✈️ 19:05 高松機場起飛</span></div>
-            <div class="day-image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Ritsurin.JPG" alt="栗林公園">
-            </div>
-            <div class="day-content">
-                <div class="block transport">
-                    <h3>🟢 交通動線</h3>
-                    <ul>
-                        <li>琴電：高松築港 → 栗林公園 <span class="price-note">(刷 IC 卡)</span></li>
-                        <li>利木津巴士：高松車站 → 高松機場 <span class="price-note">(¥1,000 / 45分)</span></li>
-                    </ul>
-                </div>
-                <div class="block main">
-                    <h3>🔵 景點安排</h3>
-                    <ul>
-                        <li><span class="highlight">栗林公園：</span>特別名勝，建議搭乘南湖周遊船。</li>
-                        <li>北濱 Alley：高松港舊倉庫改建的文青店鋪群。</li>
-                    </ul>
-                </div>
-                <div class="block food">
-                    <h3>🔴 美食推薦</h3>
-                    <ul>
-                        <li><span class="highlight">讚岐烏龍麵</span> (推薦：手打十段、竹清 或 栗林公園內上等黑松)。</li>
-                    </ul>
-                </div>
-                <div class="block rain">
-                    <h3>🌧️ 雨備方案</h3>
-                    <ul>
-                        <li>栗林公園內茶屋休憩；高松機場內也有許多商店與烏龍麵店可最後採買。</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="day-card">
-            <div class="day-header">
-                <h2>💰 交通預算精算 (單人單買)</h2>
-            </div>
-            <div class="day-content">
-                <table>
-                    <tr style="background:#f5f5f5; font-weight:bold;">
-                        <td>區間項目</td>
-                        <td>預估金額 (日圓)</td>
-                    </tr>
-                    <tr>
-                        <td>機場巴士/利木津 (兩次)</td>
-                        <td>約 ¥2,450</td>
-                    </tr>
-                    <tr>
-                        <td>廣島 ↔ 吳 / 廣島 ↔ 宮島口 (來回)</td>
-                        <td>約 ¥1,860</td>
-                    </tr>
-                    <tr>
-                        <td>宮島渡輪 (含入島稅)</td>
-                        <td>¥500</td>
-                    </tr>
-                    <tr>
-                        <td>廣島 → 岡山 (新幹線自由席)</td>
-                        <td>¥5,610</td>
-                    </tr>
-                    <tr>
-                        <td>岡山 → 高松 (快速 Marine Liner)</td>
-                        <td>¥1,660</td>
-                    </tr>
-                    <tr>
-                        <td>其他小額 (路面電車/琴電)</td>
-                        <td>約 ¥1,000</td>
-                    </tr>
-                    <tr style="color:var(--transport-color); font-weight:bold;">
-                        <td>總計 (不含租車費用)</td>
-                        <td>約 ¥13,080</td>
-                    </tr>
-                    <tr style="color:var(--secondary-color); font-size: 0.9rem;">
-                        <td>※ 註：對比「瀨戶內周遊券」售價 ¥22,000，您省下了約 ¥8,920。</td>
-                        <td></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-    </div>
-
-    <footer>
-        <p>廣島・岡山・香川之旅 ｜ 2026 祝旅途愉快 🇯🇵</p>
-
-        <details
-            style="margin-top:20px; text-align:left; max-width:800px; margin-left:auto; margin-right:auto; background: #fff; padding: 15px; border-radius: 10px; color: #555;">
-            <summary style="cursor:pointer; font-weight: bold;">📷 圖片授權與來源說明 (Creative Commons)</summary>
-
-            <ul style="list-style:none; padding-left:0; margin-top:12px; font-size:0.8rem; line-height:1.6;">
-                <li>
-                    <strong>Day 1 廣島原爆圓頂屋</strong>：作者 <a
-                        href="https://commons.wikimedia.org/wiki/User:Bannerportadaesvoy">bannerportadaesvoy</a>, <a
-                        href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
-                </li>
-                <li>
-                    <strong>Day 2 吳市大和博物館</strong>：作者 <a
-                        href="https://commons.wikimedia.org/wiki/User:Wei-Te_Wong">Wei-Te Wong</a>, <a
-                        href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>
-                </li>
-                <li>
-                    <strong>Day 3 宮島嚴島神社</strong>：作者 <a
-                        href="https://commons.wikimedia.org/wiki/User:Pistachio001">Pistachio001</a>, <a
-                        href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
-                </li>
-                <li>
-                    <strong>Day 4 岡山後樂園</strong>：作者 <a
-                        href="https://commons.wikimedia.org/wiki/User:Fjkelfeimvvn">Fjkelfeimvvn</a>, <a
-                        href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>
-                </li>
-                <li>
-                    <strong>Day 5 倉敷美觀地區</strong>：作者 <a
-                        href="https://commons.wikimedia.org/wiki/User:663highland">663highland</a>, <a
-                        href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
-                </li>
-                <li>
-                    <strong>Day 6 吉備津神社</strong>：作者 <a
-                        href="https://commons.wikimedia.org/wiki/User:Yoshio_Kohara">Yoshio Kohara</a>, <a
-                        href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>
-                </li>
-                <li>
-                    <strong>Day 7 高松栗林公園</strong>：作者 <a href="https://commons.wikimedia.org/wiki/User:Leela_Soden">Leela
-                        Soden</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
-                </li>
-            </ul>
-            <p style="font-size: 0.75rem; color: #999;">※ 本網頁僅供個人旅遊規劃使用，圖片版權歸原作者所有。</p>
-        </details>
+        <p class="text-[10px] tracking-[0.4em] uppercase font-bold">Travel Planner Portfolio</p>
     </footer>
 
 </body>
-
 </html>
