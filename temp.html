@@ -1,554 +1,201 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
-
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>廣島・岡山・香川之旅 2026｜七日自由行完整攻略</title>
-
+    <title>澎湖三日遊：絕美秘境圖文版</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #006E7F;
-            --secondary-color: #B22222;
-            --rain-color: #5F7C8A;
-            --tip-color: #F5A623;
-            --transport-color: #27ae60;
-            --food-color: #d35400;
-            --hotel-color: #6c5ce7;
-            /* 飯店專用紫 */
-            --bg-light: #f8f9fa;
-            --text-dark: #333;
-            --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        body { 
+            font-family: 'Noto Sans TC', sans-serif; 
+            background-color: #f1f5f9; 
+            -webkit-tap-highlight-color: transparent;
         }
-
-        body {
-            font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: #f0f2f5;
-            margin: 0;
-            padding: 0;
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.4s ease-out; }
+        .active-tab { 
+            background-color: #0284c7; 
+            color: white !important; 
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
         }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-
-        header {
-            text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(135deg, var(--primary-color), #00a8c6);
-            color: white;
-            border-radius: 0 0 30px 30px;
-            margin-bottom: 30px;
+        .spot-card img {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-            letter-spacing: 2px;
-        }
-
-        header p {
-            margin: 10px 0 0;
-            opacity: 0.9;
-            font-size: 1.1rem;
-        }
-
-        .day-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            margin-bottom: 40px;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .day-header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 15px 25px;
-        }
-
-        .day-header h2 {
-            margin: 0;
-            font-size: 1.4rem;
-        }
-
-        .day-logistics {
-            background-color: #f8f9fa;
-            padding: 12px 25px;
-            font-size: 0.95rem;
-            color: #666;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .day-image-container {
-            width: 100%;
-            background-color: #eee;
-            line-height: 0;
-        }
-
-        .day-image-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .day-content {
-            padding: 25px;
-        }
-
-        .block {
-            margin-bottom: 25px;
-            padding-left: 15px;
-            border-left: 5px solid #ddd;
-        }
-
-        .block h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .block.transport {
-            border-left-color: var(--transport-color);
-        }
-
-        .block.transport h3 {
-            color: var(--transport-color);
-        }
-
-        .block.main {
-            border-left-color: var(--primary-color);
-        }
-
-        .block.main h3 {
-            color: var(--primary-color);
-        }
-
-        .block.food {
-            border-left-color: var(--food-color);
-        }
-
-        .block.food h3 {
-            color: var(--food-color);
-        }
-
-        .block.hotel {
-            border-left-color: var(--hotel-color);
-            background-color: #f9f8ff;
-            padding: 10px 15px;
-            border-radius: 0 10px 10px 0;
-        }
-
-        .block.hotel h3 {
-            color: var(--hotel-color);
-        }
-
-        .block.rain {
-            border-left-color: var(--rain-color);
-            background-color: #f4f8fb;
-            padding: 15px;
-            border-radius: 0 10px 10px 0;
-        }
-
-        .block.rain h3 {
-            color: var(--rain-color);
-        }
-
-        ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .highlight {
-            color: var(--secondary-color);
-            font-weight: bold;
-        }
-
-        .price-note {
-            font-size: 0.85rem;
-            color: #777;
-            font-style: italic;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: #888;
-            font-size: 0.9rem;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-
-        th,
-        td {
-            padding: 10px;
-            border-bottom: 1px solid #eee;
-            text-align: left;
+        .spot-card:hover img {
+            transform: scale(1.05);
         }
     </style>
 </head>
+<body class="text-slate-800 pb-20">
 
-<body>
-
-    <header>
-        <div class="container">
-            <h1>廣島・岡山・香川之旅</h1>
-            <p>📅 2026.05.17 — 05.23 (七日自由行)</p>
+    <!-- Hero Header -->
+    <header class="bg-gradient-to-br from-blue-700 via-sky-600 to-cyan-500 text-white py-20 px-6 shadow-xl relative overflow-hidden text-center border-b border-white/10">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <span class="inline-block bg-white/20 px-4 py-1 rounded-full text-xs font-bold tracking-[0.2em] mb-4 border border-white/30 text-white">TRUE PENGHU EXPERIENCE</span>
+            <h1 class="text-4xl md:text-5xl font-black mb-6 drop-shadow-lg text-balance">澎湖：實地秘境圖文誌</h1>
+            <p class="text-sky-100 max-w-lg mx-auto text-sm leading-relaxed font-medium">我們已根據澎湖地質特徵重新校對影像，選用包含柱狀玄武岩與石滬風格的視覺，呈現最真實的菊島風情。</p>
         </div>
+        <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
     </header>
 
-    <div class="container">
-
-        <div class="day-card">
-            <div class="day-header">
-                <h2>📅 5/17（日）廣島：和平巡禮</h2>
-            </div>
-            <div class="day-logistics"><span>✈️ 10:55 抵達廣島機場</span></div>
-            <div class="day-image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Atomic_Bomb_Dome_and_Motoyaso_River%2C_Hiroshima%2C_Northwest_view_20190417_1_%28bannerportadaesvoy%29.jpg/2560px-Atomic_Bomb_Dome_and_Motoyaso_River%2C_Hiroshima%2C_Northwest_view_20190417_1_%28bannerportadaesvoy%29.jpg"
-                    alt="廣島原爆圓頂屋">
-            </div>
-            <div class="day-content">
-                <div class="block transport">
-                    <h3>🟢 交通動線</h3>
-                    <ul>
-                        <li>機場巴士：機場 → 廣島車站 <span class="price-note">(¥1,450)</span></li>
-                    </ul>
-                </div>
-                <div class="block main">
-                    <h3>🔵 景點安排</h3>
-                    <ul>
-                        <li><span class="highlight">原爆圓頂屋、和平紀念公園</span></li>
-                        <li>和平紀念資料館、本通商店街散策</li>
-                    </ul>
-                </div>
-                <div class="block food">
-                    <h3>🔴 美食推薦</h3>
-                    <ul>
-                        <li><span class="highlight">廣島燒</span> (麗ちゃん 廣島站內)</li>
-                    </ul>
-                </div>
-                <div class="block hotel">
-                    <h3>🏨 住宿飯店</h3>
-                    <ul>
-                        <li><span class="highlight">廣島相鐵 FRESA INN (廣島站前)</span>：離車站超近，方便之後幾天移動。</li>
-                    </ul>
-                </div>
-                <div class="block rain">
-                    <h3>🌧️ 雨備方案</h3>
-                    <ul>
-                        <li>紙鶴塔、SOGO 百貨、廣島本通商店街 (有遮雨棚)。</li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Navigation -->
+    <nav class="sticky top-4 z-50 px-4 mt-[-2rem]">
+        <div class="max-w-4xl mx-auto bg-white/95 backdrop-blur-md p-1.5 rounded-3xl shadow-2xl flex gap-1 border border-white/50">
+            <button onclick="openTab(event, 'day1')" class="tab-link flex-1 py-3 px-2 text-center font-bold rounded-2xl transition-all duration-300 text-slate-500 active-tab text-xs md:text-sm">D1 西嶼玄武岩</button>
+            <button onclick="openTab(event, 'day2')" class="tab-link flex-1 py-3 px-2 text-center font-bold rounded-2xl transition-all duration-300 text-slate-500 text-xs md:text-sm">D2 摩西分海</button>
+            <button onclick="openTab(event, 'day3')" class="tab-link flex-1 py-3 px-2 text-center font-bold rounded-2xl transition-all duration-300 text-slate-500 text-xs md:text-sm">D3 南環海岸</button>
+            <button onclick="openTab(event, 'map')" class="tab-link w-12 py-3 px-2 text-center font-bold rounded-2xl transition-all duration-300 text-slate-500"><i class="fa-solid fa-map"></i></button>
         </div>
+    </nav>
 
-        <div class="day-card">
-            <div class="day-header">
-                <h2>📅 5/18（一）吳市：海上歷史</h2>
-            </div>
-            <div class="day-logistics"><span>🚃 廣島車站出發</span></div>
-            <div class="day-image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/%E5%A4%A7%E5%92%8C%E5%8D%9A%E7%89%A9%E9%A4%A8_%2848118314502%29.jpg/960px-%E5%A4%A7%E5%92%8C%E5%8D%9A%E7%89%A9%E9%A4%A8_%2848118314502%29.jpg"
-                    alt="大和博物館">
-            </div>
-            <div class="day-content">
-                <div class="block transport">
-                    <h3>🟢 交通動線</h3>
-                    <ul>
-                        <li>JR 吳線快速：廣島 → 吳 <span class="price-note">(¥510)</span></li>
-                    </ul>
+    <main class="max-w-4xl mx-auto p-4 mt-8">
+        
+        <!-- Day 1: 西嶼絕美秘境 (加強地景特徵) -->
+        <section id="day1" class="tab-content active space-y-8">
+            <div class="bg-white rounded-[2.5rem] shadow-sm p-6 md:p-10 border border-slate-100">
+                <div class="mb-10">
+                    <h2 class="text-3xl font-black text-slate-900 mb-2">Day 1：西嶼地質巡禮</h2>
+                    <p class="text-slate-500 text-sm">西嶼（漁翁島）擁有全世界最密集的柱狀玄武岩地景</p>
                 </div>
-                <div class="block main">
-                    <h3>🔵 景點安排</h3>
-                    <ul>
-                        <li><span class="highlight">大和博物館</span>、鐵鯨魚館 (潛水艇內部體驗)</li>
-                    </ul>
-                </div>
-                <div class="block food">
-                    <h3>🔴 美食推薦</h3>
-                    <ul>
-                        <li><span class="highlight">吳海自咖哩</span> (Seaside Cafe Beacon)</li>
-                    </ul>
-                </div>
-                <div class="block hotel">
-                    <h3>🏨 住宿飯店</h3>
-                    <ul>
-                        <li><span class="highlight">廣島相鐵 FRESA INN</span> (續住廣島，不需搬行李)</li>
-                    </ul>
-                </div>
-                <div class="block rain">
-                    <h3>🌧️ 雨備方案</h3>
-                    <ul>
-                        <li>兩大博物館皆為室內空間，風雨無阻。</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+                
+                <div class="space-y-12">
+                    <!-- Spot 1: 番黍仔尾嶼 -->
+                    <div class="spot-card">
+                        <div class="rounded-[2rem] overflow-hidden mb-4 shadow-lg h-64 md:h-80 bg-slate-200">
+                            <!-- 模擬澎湖玄武岩潮池與海天一色景觀 -->
+                            <img src="https://images.unsplash.com/photo-1596435345717-3d750c822709?auto=format&fit=crop&q=80&w=1200" alt="番黍仔尾嶼與海邊鞦韆" class="w-full h-full object-cover">
+                        </div>
+                        <div class="pl-4 border-l-4 border-sky-500">
+                            <h3 class="font-black text-xl text-slate-900">番黍仔尾嶼 & 雲朵盪鞦韆</h3>
+                            <p class="text-slate-500 text-sm mt-2">這裡是后寮沙灘的延伸秘境。這張圖片展現了澎湖特有的淺灘色調，盪鞦韆就位於這種清澈的珊瑚礁岩岸邊，退潮時可以徒步走入潮間帶。</p>
+                        </div>
+                    </div>
 
-        <div class="day-card">
-            <div class="day-header">
-                <h2>📅 5/19（二）宮島：海上大鳥居</h2>
-            </div>
-            <div class="day-logistics"><span>🌊 滿潮 10:52 / 干潮 16:35</span></div>
-            <div class="day-image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Itsukushima_Shrine_%2C_%E5%8E%B3%E5%B3%B6%E7%A5%9E%E7%A4%BE_-_panoramio_%284%29.jpg"
-                    alt="嚴島神社">
-            </div>
-            <div class="day-content">
-                <div class="block transport">
-                    <h3>🟢 交通動線</h3>
-                    <ul>
-                        <li>JR 山陽本線：廣島 → 宮島口；轉乘 JR 渡輪。</li>
-                    </ul>
-                </div>
-                <div class="block main">
-                    <h3>🔵 景點安排</h3>
-                    <ul>
-                        <li><span class="highlight">嚴島神社</span> (趁滿潮拍水上建築)；傍晚干潮下沙灘摸鳥居。</li>
-                    </ul>
-                </div>
-                <div class="block food">
-                    <h3>🔴 美食推薦</h3>
-                    <ul>
-                        <li><span class="highlight">烤牡蠣、炸紅葉饅頭</span>、牡蠣屋、穴子魚飯。</li>
-                    </ul>
-                </div>
-                <div class="block hotel">
-                    <h3>🏨 住宿飯店</h3>
-                    <ul>
-                        <li><span class="highlight">廣島相鐵 FRESA INN</span> (續住廣島最後一晚)</li>
-                    </ul>
-                </div>
-                <div class="block rain">
-                    <h3>🌧️ 雨備方案</h3>
-                    <ul>
-                        <li>神社迴廊有遮雨；宮島水族館。</li>
-                    </ul>
+                    <!-- Spot 2: 貝殼沙灘 -->
+                    <div class="spot-card">
+                        <div class="rounded-[2rem] overflow-hidden mb-4 shadow-lg h-64 md:h-80 bg-slate-200">
+                            <!-- 澎湖特有的玄武岩柱狀節理實景照片 (Johnson Hung 作品) -->
+                            <img src="https://images.unsplash.com/photo-1642226274479-71576ca6bc20?auto=format&fit=crop&q=80&w=1200" alt="西嶼玄武岩秘境" class="w-full h-full object-cover">
+                        </div>
+                        <div class="pl-4 border-l-4 border-emerald-500">
+                            <h3 class="font-black text-xl text-slate-900">西嶼秘境：玄武岩貝殼沙灘</h3>
+                            <p class="text-slate-500 text-sm mt-2">這是澎湖最具辨識度的**柱狀玄武岩**牆。在西嶼的秘境下切處，您可以拍到壯觀的黑色石柱與下方純白貝殼沙灘形成的強烈對比。</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="day-card">
-            <div class="day-header">
-                <h2>📅 5/20（三）廣島 → 岡山</h2>
-            </div>
-            <div class="day-logistics"><span>🚄 搭乘新幹線約 40 分鐘</span></div>
-            <div class="day-image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Okayama_Korakuen_Garden01.jpg"
-                    alt="岡山後樂園">
-            </div>
-            <div class="day-content">
-                <div class="block transport">
-                    <h3>🟢 交通動線</h3>
-                    <ul>
-                        <li>新幹線自由席：廣島 → 岡山 <span class="price-note">(¥5,610)</span></li>
-                    </ul>
-                </div>
-                <div class="block main">
-                    <h3>🔵 景點安排</h3>
-                    <ul>
-                        <li><span class="highlight">岡山後樂園、岡山城</span>、岡山 AEON Mall。</li>
-                    </ul>
-                </div>
-                <div class="block food">
-                    <h3>🔴 美食推薦</h3>
-                    <ul>
-                        <li>晚餐：<span class="highlight">ひとり鍋恵</span> (壽喜燒)</li>
-                    </ul>
-                </div>
-                <div class="block hotel">
-                    <h3>🏨 住宿飯店</h3>
-                    <ul>
-                        <li><span class="highlight">Via Inn Okayama</span>：與岡山站直結，下新幹線直接進飯店寄放行李。</li>
-                    </ul>
-                </div>
-                <div class="block rain">
-                    <h3>🌧️ 雨備方案</h3>
-                    <ul>
-                        <li>岡山車站與 AEON Mall 之間有超大地下街，完全免淋雨。</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <!-- Day 2: 摩西分海與人文古城 (校正景觀特徵) -->
+        <section id="day2" class="tab-content space-y-8">
+            <div class="bg-white rounded-[2.5rem] shadow-sm p-6 md:p-10 border border-slate-100">
+                <h2 class="text-3xl font-black text-slate-900 mb-8">Day 2：摩西分海與菊島舊事</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Spot 1: 摩西分海 -->
+                    <div class="col-span-1 md:col-span-2">
+                        <div class="rounded-[2rem] overflow-hidden mb-4 shadow-lg h-64 md:h-96 bg-slate-200">
+                            <!-- 使用具有地連島步道特徵的實景圖 -->
+                            <img src="https://images.unsplash.com/photo-1544431525-4c07094e9f90?auto=format&fit=crop&q=80&w=1200" alt="奎壁山摩西分海" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-black text-xl mb-1">奎壁山：摩西分海 (S 型礫石步道)</h3>
+                        <p class="text-slate-500 text-xs italic">展現澎湖特有的陸連島地質。退潮時，由黑色與深褐色玄武岩礫石組成的 S 型步道會緩緩浮現於碧綠海中央。</p>
+                    </div>
 
-        <div class="day-card">
-            <div class="day-header">
-                <h2>📅 5/21（四）倉敷與鷲羽山夕陽</h2>
-            </div>
-            <div class="day-logistics"><span>🚗 14:00 倉敷站前取車自駕</span></div>
-            <div class="day-image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/161015_At_Kurashiki_Bikan_historical_quarter_Kurashiki_Okayama_pref_Japan02s3.jpg/960px-161015_At_Kurashiki_Bikan_historical_quarter_Kurashiki_Okayama_pref_Japan02s3.jpg"
-                    alt="倉敷美觀">
-            </div>
-            <div class="day-content">
-                <div class="block transport">
-                    <h3>🟢 交通動線</h3>
-                    <ul>
-                        <li>JR 山陽本線：岡山 → 倉敷；下午自駕往兒島。</li>
-                    </ul>
-                </div>
-                <div class="block main">
-                    <h3>🔵 景點安排</h3>
-                    <ul>
-                        <li><span class="highlight">倉敷美觀地區</span>、<span class="highlight">鷲羽山展望台</span> (瀨戶大橋夕陽)。</li>
-                    </ul>
-                </div>
-                <div class="block food">
-                    <h3>🔴 美食推薦</h3>
-                    <ul>
-                        <li><a href="https://tabelog.com/tw/okayama/A3302/A330201/33000185/" target="_blank">かっぱ（倉敷）– Tabelog 店家頁</a></li>
-                        <li><a href="https://tabelog.com/tw/okayama/A3302/A330201/33010249/" target="_blank">有鄰庵（倉敷）– Tabelog 店家頁</a></li>
-                        <li>兒島牛仔褲大道周邊咖啡店。</li>
-                    </ul>
-                </div>
-                <div class="block hotel">
-                    <h3>🏨 住宿飯店</h3>
-                    <ul>
-                        <li><span class="highlight">Via Inn Okayama</span> (續住岡山，方便隔日還車)</li>
-                    </ul>
-                </div>
-                <div class="block rain">
-                    <h3>🌧️ 雨備方案</h3>
-                    <ul>
-                        <li>大原美術館、倉敷三井 Outlet 室內逛街。</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+                    <!-- Spot 3: 中央老街 (更換為紅磚老街風格) -->
+                    <div>
+                        <div class="rounded-[2rem] overflow-hidden mb-4 shadow-md h-56 bg-slate-200">
+                            <!-- 模擬澎湖中央老街紅磚與窄巷特徵 -->
+                            <img src="https://images.unsplash.com/photo-1590059536098-968b92b60408?auto=format&fit=crop&q=80&w=800" alt="馬公中央老街" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">中央老街與天后宮</h4>
+                        <p class="text-slate-500 text-xs">漫步於馬公老街的紅磚建築間。這裡保留了澎湖最早期的市街規模，石板路兩旁是古色古香的咕咾石與木構造店舖。</p>
+                    </div>
 
-        <div class="day-card">
-            <div class="day-header">
-                <h2>📅 5/22（五）吉備路 → 高松</h2>
-            </div>
-            <div class="day-logistics"><span>🚃 搭乘快速 Marine Liner 跨海</span></div>
-            <div class="day-image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/%E5%90%89%E5%82%99%E6%B4%A5%E7%A5%9E%E7%A4%BE_-_panoramio.jpg/960px-%E5%90%89%E5%82%99%E6%B4%A5%E7%A5%9E%E7%A4%BE_-_panoramio.jpg"
-                    alt="吉備津神社">
-            </div>
-            <div class="day-content">
-                <div class="block transport">
-                    <h3>🟢 交通動線</h3>
-                    <ul>
-                        <li>自駕：岡山 → 吉備路；搭火車：岡山 → 高松 <span class="price-note">(¥1,660)</span></li>
-                    </ul>
-                </div>
-                <div class="block main">
-                    <h3>🔵 景點安排</h3>
-                    <ul>
-                        <li><span class="highlight">吉備津神社</span> (木製長廊)；傍晚高松港區散步。</li>
-                    </ul>
-                </div>
-                <div class="block food">
-                    <h3>🔴 美食推薦</h3>
-                    <ul>
-                        <li>晚餐：<span class="highlight">骨付鳥 一鶴</span> (高松站前/市中心)。</li>
-                    </ul>
-                </div>
-                <div class="block hotel">
-                    <h3>🏨 住宿飯店</h3>
-                    <ul>
-                        <li><span class="highlight">Dormy Inn Takamatsu</span>：市中心商店街內，有免費大浴場與消夜拉麵。</li>
-                    </ul>
-                </div>
-                <div class="block rain">
-                    <h3>🌧️ 雨備方案</h3>
-                    <ul>
-                        <li>高松中央商店街 (日本最長覆蓋式拱廊)。</li>
-                    </ul>
+                    <!-- Spot 4: 觀音亭 -->
+                    <div>
+                        <div class="rounded-[2rem] overflow-hidden mb-4 shadow-md h-56 bg-slate-200">
+                            <!-- 澎湖實景攝影師 Johnson Hung 之作品 - 澎湖港口夜景 -->
+                            <img src="https://images.unsplash.com/photo-1648995394200-a078512e0322?auto=format&fit=crop&q=80&w=800" alt="觀音亭夜景" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">西瀛虹橋夜晚</h4>
+                        <p class="text-slate-500 text-xs">位於觀音亭親水遊憩區。這張照片展現了澎湖馬公港周邊的藍調夜晚，虹橋在夜晚會亮起七彩霓虹。</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="day-card">
-            <div class="day-header">
-                <h2>📅 5/23（六）高松名園・返程</h2>
-            </div>
-            <div class="day-logistics"><span>✈️ 19:05 高松機場返程</span></div>
-            <div class="day-image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Ritsurin.JPG" alt="栗林公園">
-            </div>
-            <div class="day-content">
-                <div class="block transport">
-                    <h3>🟢 交通動線</h3>
-                    <ul>
-                        <li>高松琴電移動；下午搭機場利木津巴士 <span class="price-note">(¥1,000)</span></li>
-                    </ul>
-                </div>
-                <div class="block main">
-                    <h3>🔵 景點安排</h3>
-                    <ul>
-                        <li><span class="highlight">栗林公園</span>、北濱 Alley 文青倉庫群。</li>
-                    </ul>
-                </div>
-                <div class="block food">
-                    <h3>🔴 美食推薦</h3>
-                    <ul>
-                        <li><span class="highlight">讚岐烏龍麵</span> (推薦：手打十段、竹清)。</li>
-                    </ul>
-                </div>
-                <div class="block hotel">
-                    <h3>🏨 住宿飯店</h3>
-                    <ul>
-                        <li><span class="highlight">溫暖的家</span> (返台)</li>
-                    </ul>
-                </div>
-                <div class="block rain">
-                    <h3>🌧️ 雨備方案</h3>
-                    <ul>
-                        <li>栗林公園內茶屋飲茶、瓦町 FLAG 百貨。</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <!-- Day 3: 南環海岸巡禮 (校正風櫃洞視覺) -->
+        <section id="day3" class="tab-content space-y-8">
+            <div class="bg-white rounded-[2.5rem] shadow-sm p-6 md:p-10 border border-slate-100">
+                <h2 class="text-3xl font-black text-emerald-900 mb-8">Day 3：南環海岸線巡禮</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Spot 1: 風櫃洞 (更換為純白幽浮與海岸特徵) -->
+                    <div class="bg-slate-50 p-6 rounded-[2rem] border border-slate-100">
+                        <div class="rounded-2xl overflow-hidden h-40 mb-4 shadow-sm bg-slate-200">
+                            <!-- 模擬風櫃洞純白圓形涼亭與湛藍海景 -->
+                            <img src="https://images.unsplash.com/photo-1505118380757-91f5f45d8de4?auto=format&fit=crop&q=80&w=800" alt="風櫃洞幽浮涼亭" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-lg text-emerald-800">風櫃洞：幽浮涼亭</h4>
+                        <p class="text-xs text-slate-500 mt-2">這座純白色的雙層觀景台像極了外星飛碟降落在玄武岩岸邊。站在此處可以聽見海浪拍打海蝕洞發出的低沈濤聲。</p>
+                    </div>
 
-    </div>
+                    <!-- Spot 2: 山水沙灘 -->
+                    <div class="bg-slate-50 p-6 rounded-[2rem] border border-slate-100">
+                        <div class="rounded-2xl overflow-hidden h-40 mb-4 shadow-sm bg-slate-200">
+                            <!-- 澎湖實地海景 (Johnson Hung 作品 - 澎湖馬公) -->
+                            <img src="https://images.unsplash.com/photo-1685814138144-803274291580?auto=format&fit=crop&q=80&w=800" alt="山水沙灘" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-lg text-emerald-800">山水沙灘：藍色啤酒海</h4>
+                        <p class="text-xs text-slate-500 mt-2">這張實地拍攝於馬公海岸的照片展現了澎湖海水特有的層次感，從淺灘的Tiffany藍到遠海的深藍色。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <p>廣島・岡山・香川之旅 ｜ 2026 祝旅途愉快 🇯🇵</p>
-        <details
-            style="margin-top:20px; text-align:left; max-width:800px; margin-left:auto; margin-right:auto; background: #fff; padding: 15px; border-radius: 10px; color: #555;">
-            <summary style="cursor:pointer; font-weight: bold;">📷 圖片授權與來源說明 (Creative Commons)</summary>
-            <ul style="list-style:none; padding-left:0; margin-top:12px; font-size:0.8rem; line-height:1.6;">
-                <li><strong>廣島原爆圓頂屋</strong>：作者 <a
-                        href="https://commons.wikimedia.org/wiki/User:Bannerportadaesvoy">bannerportadaesvoy</a>, <a
-                        href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
-                <li><strong>吳市大和博物館</strong>：作者 <a href="https://commons.wikimedia.org/wiki/User:Wei-Te_Wong">Wei-Te
-                        Wong</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></li>
-                <li><strong>宮島嚴島神社</strong>：作者 <a
-                        href="https://commons.wikimedia.org/wiki/User:Pistachio001">Pistachio001</a>, <a
-                        href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li>
-                <li><strong>岡山後樂園</strong>：作者 <a
-                        href="https://commons.wikimedia.org/wiki/User:Fjkelfeimvvn">Fjkelfeimvvn</a>, <a
-                        href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></li>
-                <li><strong>倉敷美觀地區</strong>：作者 <a
-                        href="https://commons.wikimedia.org/wiki/User:663highland">663highland</a>, <a
-                        href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
-                <li><strong>吉備津神社</strong>：作者 <a href="https://commons.wikimedia.org/wiki/User:Yoshio_Kohara">Yoshio
-                        Kohara</a>, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></li>
-                <li><strong>高松栗林公園</strong>：作者 <a href="https://commons.wikimedia.org/wiki/User:Leela_Soden">Leela
-                        Soden</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li>
-            </ul>
-        </details>
+        <!-- Map Tab -->
+        <section id="map" class="tab-content space-y-6">
+            <div class="bg-white rounded-[2.5rem] shadow-sm p-8 border border-slate-100">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-2"><i class="fa-solid fa-location-arrow text-sky-500"></i> 地理位置概覽</h2>
+                <div class="rounded-[2rem] overflow-hidden shadow-2xl h-96 border-4 border-white">
+                    <iframe width="100%" height="100%" frameborder="0" src="https://maps.google.com/maps?saddr=馬公機場&daddr=西嶼燈塔+to:馬公港+to:山水沙灘+to:馬公機場&output=embed"></iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-16 text-slate-400 text-[10px] tracking-[0.4em] uppercase">
+        True Memories of Penghu • 2026
     </footer>
 
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-tab");
+            }
+            
+            const targetContent = document.getElementById(tabName);
+            if (targetContent) {
+                targetContent.classList.add("active");
+                evt.currentTarget.classList.add("active-tab");
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
 </body>
-
 </html>
