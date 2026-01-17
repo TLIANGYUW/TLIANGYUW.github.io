@@ -8,8 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Noto Sans TC', sans-serif; background-color: #f8fafc; }
-        .tabelog-tag { background-color: #ff6b6b; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
+        .tabelog-link { color: #ea580c; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; transition: color 0.2s; }
+        .tabelog-link:hover { color: #c2410c; text-decoration: none; }
         .luggage-highlight { border-left: 4px solid #3b82f6; background-color: #eff6ff; }
+        .photo-placeholder { transition: all 0.3s ease; border: 2px dashed #cbd5e1; }
+        .photo-placeholder:hover { border-color: #94a3b8; background-color: #f1f5f9; }
     </style>
 </head>
 <body class="p-4 md:p-8">
@@ -21,7 +24,7 @@
         </header>
 
         <!-- 行程表格 (Desktop) -->
-        <div class="hidden md:block overflow-x-auto bg-white rounded-xl shadow-lg mb-10">
+        <div class="hidden md:block overflow-x-auto bg-white rounded-xl shadow-lg mb-10 border border-slate-100">
             <table class="w-full text-left border-collapse">
                 <thead>
                     <tr class="bg-slate-800 text-white text-sm">
@@ -38,63 +41,87 @@
                         <td class="p-4 border-b text-center">廣島</td>
                         <td class="p-4 border-b"><b>廣島初抵</b> (華航 10:35 抵達) → 飯店寄放行李 → <b>原爆圓頂/和平資料館</b> (預約制)</td>
                         <td class="p-4 border-b text-sm">雨備：廣島美術館 / 廣島 SOGO 購物</td>
-                        <td class="p-4 border-b text-sm font-medium text-orange-600">麗ちゃん (廣島燒)</td>
+                        <td class="p-4 border-b text-sm">
+                            <a href="https://tabelog.com/hiroshima/A3401/A340101/34024328/" target="_blank" class="tabelog-link">麗ちゃん (廣島燒)</a>
+                        </td>
                     </tr>
                     <tr class="hover:bg-slate-50">
-                        <td class="p-4 border-b text-center font-medium">Day 2<br>5/16 (六)</td>
+                        <td class="p-4 border-b text-center font-medium text-slate-600">Day 2<br>5/16 (六)</td>
                         <td class="p-4 border-b text-center">廣島</td>
                         <td class="p-4 border-b"><b>文青尾道</b> (千光寺、貓之細道、瀨戶內展望)</td>
                         <td class="p-4 border-b text-sm">隱藏：西國寺 (大草鞋) / 雨備：ONOMICHI U2</td>
-                        <td class="p-4 border-b text-sm font-medium text-orange-600">一番館 (拉麵) / おやつとやまねこ (布丁)</td>
+                        <td class="p-4 border-b text-sm">
+                            <a href="https://tabelog.com/hiroshima/A3403/A340302/34001550/" target="_blank" class="tabelog-link">一番館 (拉麵)</a><br>
+                            <a href="https://tabelog.com/hiroshima/A3403/A340302/34011850/" target="_blank" class="tabelog-link">おやつとやまねこ (布丁)</a>
+                        </td>
                     </tr>
                     <tr class="hover:bg-slate-50">
-                        <td class="p-4 border-b text-center font-medium">Day 3<br>5/17 (日)</td>
+                        <td class="p-4 border-b text-center font-medium text-slate-600">Day 3<br>5/17 (日)</td>
                         <td class="p-4 border-b text-center">廣島</td>
                         <td class="p-4 border-b"><b>岩國錦帶橋</b> → <b>廣島市區</b> (廣島城、縮景園、本通商店街、紙鶴塔)</td>
                         <td class="p-4 border-b text-sm">備選：三瀧寺 / 雨備：紙鶴塔室內區</td>
-                        <td class="p-4 border-b text-sm font-medium text-orange-600">平清 (岩國壽司) / ばくだん屋 (沾麵)</td>
+                        <td class="p-4 border-b text-sm">
+                            <a href="https://tabelog.com/yamaguchi/A3506/A350601/35000045/" target="_blank" class="tabelog-link">平清 (岩國壽司)</a><br>
+                            <a href="https://tabelog.com/hiroshima/A3401/A340101/34024330/" target="_blank" class="tabelog-link">ばくだん屋 (沾麵)</a>
+                        </td>
                     </tr>
                     <tr class="hover:bg-slate-50">
-                        <td class="p-4 border-b text-center font-medium">Day 4<br>5/18 (一)</td>
+                        <td class="p-4 border-b text-center font-medium text-slate-600">Day 4<br>5/18 (一)</td>
                         <td class="p-4 border-b text-center">廣島</td>
                         <td class="p-4 border-b"><b>軍事吳市</b> (2026 全新開幕大和博物館、鐵鯨魚館、烏小島)</td>
                         <td class="p-4 border-b text-sm">隱藏：入船山紀念館 / 雨備：室內博物館</td>
-                        <td class="p-4 border-b text-sm font-medium text-orange-600">珍來軒 (吳冷麵) / 海自咖哩</td>
+                        <td class="p-4 border-b text-sm">
+                            <a href="https://tabelog.com/hiroshima/A3404/A340401/34000185/" target="_blank" class="tabelog-link">珍來軒 (吳冷麵)</a><br>
+                            <span class="text-xs text-slate-500">海自咖哩 (週邊店鋪)</span>
+                        </td>
                     </tr>
                     <tr class="hover:bg-slate-50 luggage-highlight">
-                        <td class="p-4 border-b text-center font-medium">Day 5<br>5/19 (二)</td>
+                        <td class="p-4 border-b text-center font-medium text-blue-700">Day 5<br>5/19 (二)</td>
                         <td class="p-4 border-b text-center">廣島</td>
                         <td class="p-4 border-b font-semibold text-blue-800">極致宮島 (配合 10:52 滿潮 / 16:35 干潮) → 廣島最後巡禮</td>
                         <td class="p-4 border-b text-sm"><b>行李：09:00 寄往岡山飯店</b><br>過夜包：備 1 晚換洗物</td>
-                        <td class="p-4 border-b text-sm font-medium text-orange-600">あなごめし うえの (穴子飯)</td>
+                        <td class="p-4 border-b text-sm">
+                            <a href="https://tabelog.com/hiroshima/A3402/A340201/34000065/" target="_blank" class="tabelog-link">あなごめし うえの (穴子飯)</a>
+                        </td>
                     </tr>
                     <tr class="hover:bg-slate-50">
                         <td class="p-4 border-b text-center font-medium text-blue-600">Day 6<br>5/20 (三)</td>
                         <td class="p-4 border-b text-center">岡山</td>
                         <td class="p-4 border-b"><b>移動岡山</b>：09:30 新幹線 → <b>後樂園/岡山城</b> → <b>AEON Mall 購物</b></td>
                         <td class="p-4 border-b text-sm"><b>行李：下午抵達岡山飯店</b><br>雨備：AEON Mall 岡山</td>
-                        <td class="p-4 border-b text-sm font-medium text-orange-600">福壽司 / やまと (豬排丼)</td>
+                        <td class="p-4 border-b text-sm">
+                            <a href="https://tabelog.com/okayama/A3301/A330101/33000043/" target="_blank" class="tabelog-link">福壽司</a> / 
+                            <a href="https://tabelog.com/okayama/A3301/A330101/33000014/" target="_blank" class="tabelog-link">やまと (豬排丼)</a>
+                        </td>
                     </tr>
                     <tr class="hover:bg-slate-50">
                         <td class="p-4 border-b text-center font-medium text-blue-600">Day 7<br>5/21 (四)</td>
                         <td class="p-4 border-b text-center">岡山</td>
                         <td class="p-4 border-b"><b>倉敷美觀</b> (白壁土藏、阿智神社) → <b>下午自駕鷲羽山夕陽</b></td>
                         <td class="p-4 border-b text-sm">隱藏：兒島牛仔褲大道 / 雨備：大原美術館</td>
-                        <td class="p-4 border-b text-sm font-medium text-orange-600">有鄰庵 / 三宅商店 (咖哩)</td>
+                        <td class="p-4 border-b text-sm">
+                            <a href="https://tabelog.com/okayama/A3302/A330201/33009572/" target="_blank" class="tabelog-link">有鄰庵</a> / 
+                            <a href="https://tabelog.com/okayama/A3302/A330201/33000195/" target="_blank" class="tabelog-link">三宅商店</a>
+                        </td>
                     </tr>
                     <tr class="hover:bg-slate-50">
                         <td class="p-4 border-b text-center font-medium text-emerald-600">Day 8<br>5/22 (五)</td>
                         <td class="p-4 border-b text-center">高松</td>
                         <td class="p-4 border-b"><b>跨海香川</b>：金刀比羅宮 → <b>高松骨付鳥/高松港夜景</b></td>
                         <td class="p-4 border-b text-sm">隱藏：中野烏龍麵學校 / 雨備：高松商店街</td>
-                        <td class="p-4 border-b text-sm font-medium text-orange-600">一鶴 Ikkaku (骨付鳥)</td>
+                        <td class="p-4 border-b text-sm">
+                            <a href="https://tabelog.com/kagawa/A3701/A370101/37000115/" target="_blank" class="tabelog-link">一鶴 Ikkaku (骨付鳥)</a>
+                        </td>
                     </tr>
                     <tr class="hover:bg-slate-50">
                         <td class="p-4 border-b text-center font-medium text-emerald-600">Day 9<br>5/23 (六)</td>
                         <td class="p-4 border-b text-center">-</td>
                         <td class="p-4 border-b"><b>高松巡禮</b>：栗林公園、讚岐烏龍麵 → 19:05 高松機場起飛</td>
                         <td class="p-4 border-b text-sm">隱藏：北濱 Alley / 雨備：香川縣立博物館</td>
-                        <td class="p-4 border-b text-sm font-medium text-orange-600">竹清 / 上等黑松茶屋</td>
+                        <td class="p-4 border-b text-sm">
+                            <a href="https://tabelog.com/kagawa/A3701/A370101/37000054/" target="_blank" class="tabelog-link">竹清</a> / 
+                            <span class="text-xs text-slate-500">上等黑松茶屋</span>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -102,16 +129,14 @@
 
         <!-- 行程列表 (Mobile) -->
         <div class="md:hidden space-y-4 mb-10">
-            <!-- Day 1 Mobile Card -->
             <div class="bg-white p-4 rounded-xl shadow border-l-4 border-slate-400">
                 <div class="flex justify-between items-start mb-2">
                     <span class="font-bold text-lg text-slate-800">Day 1 ｜ 5/15 (五)</span>
                     <span class="text-xs bg-slate-100 px-2 py-1 rounded">宿：廣島</span>
                 </div>
                 <p class="text-slate-700 text-sm mb-2">廣島初抵、原爆圓頂、和平資料館</p>
-                <p class="text-orange-600 text-xs font-bold font-medium">🍴 麗ちゃん (廣島燒)</p>
+                <p class="text-xs font-bold">🍴 <a href="https://tabelog.com/hiroshima/A3401/A340101/34024328/" target="_blank" class="tabelog-link">麗ちゃん (廣島燒)</a></p>
             </div>
-            <!-- Day 5 Mobile Card ( Luggage) -->
             <div class="bg-blue-50 p-4 rounded-xl shadow border-l-4 border-blue-500">
                 <div class="flex justify-between items-start mb-2">
                     <span class="font-bold text-lg text-blue-800">Day 5 ｜ 5/19 (二)</span>
@@ -119,14 +144,13 @@
                 </div>
                 <p class="text-slate-700 text-sm mb-1 font-semibold">宮島極致大潮之旅 (10:52 滿潮)</p>
                 <p class="text-blue-600 text-xs font-bold mb-2">📦 09:00 寄送行李至岡山</p>
-                <p class="text-orange-600 text-xs font-bold font-medium">🍴 うえの (穴子飯)</p>
+                <p class="text-xs font-bold">🍴 <a href="https://tabelog.com/hiroshima/A3402/A340201/34000065/" target="_blank" class="tabelog-link">うえの (穴子飯)</a></p>
             </div>
-            <div class="text-center text-slate-400 text-sm italic py-4">(其餘天數請參閱電腦版或滾動查看)</div>
+            <div class="text-center text-slate-400 text-sm italic py-4">(其餘天數請參閱電腦版查看完整表格)</div>
         </div>
 
         <!-- 邏輯補充區域 -->
         <div class="grid md:grid-cols-2 gap-6 mb-10">
-            <!-- 住宿與移動策略 -->
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
                 <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center">
                     <span class="mr-2">🏠</span> 住宿與移動策略
@@ -147,7 +171,6 @@
                 </ul>
             </div>
 
-            <!-- 行寄送與過夜包邏輯 (方案 C) -->
             <div class="bg-blue-50 p-6 rounded-2xl shadow-sm border border-blue-100">
                 <h2 class="text-xl font-bold text-blue-900 mb-4 flex items-center">
                     <span class="mr-2">📦</span> 行李配送邏輯 (方案 C)
@@ -161,23 +184,40 @@
                         <p class="text-xs text-blue-500 font-bold mb-1">DAY 6 早上 09:30</p>
                         <p class="text-sm text-slate-700">人搭新幹線至岡山。雙手空空玩後樂園，行李下午即抵飯店。</p>
                     </div>
-                    <p class="text-xs text-slate-500 italic">※ 此方案讓 6 位大人完全避開「拖大行李上下新幹線」的勞累，省下體力享受宮島。 ※</p>
+                    <p class="text-xs text-slate-500 italic">※ 此方案讓 6 位大人避開拖大行李擠新幹線的勞累，省下體力享受宮島。 ※</p>
                 </div>
             </div>
         </div>
 
-        <!-- 景點意象 -->
+        <!-- 景點意象 (照片預留位) -->
+        <h3 class="text-lg font-bold text-slate-700 mb-4 text-center">旅途視覺意象預留位</h3>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-            <div class="h-40 bg-slate-200 rounded-lg flex items-center justify-center text-xs text-slate-400 p-2 text-center"></div>
-            <div class="h-40 bg-slate-200 rounded-lg flex items-center justify-center text-xs text-slate-400 p-2 text-center"></div>
-            <div class="h-40 bg-slate-200 rounded-lg flex items-center justify-center text-xs text-slate-400 p-2 text-center"></div>
-            <div class="h-40 bg-slate-200 rounded-lg flex items-center justify-center text-xs text-slate-400 p-2 text-center"></div>
+            <div class="photo-placeholder h-40 bg-slate-100 rounded-lg flex flex-col items-center justify-center text-xs text-slate-400 p-2 text-center">
+                <span class="text-2xl mb-1">⛩️</span>
+                <span class="font-bold">廣島 / 宮島</span>
+                <span>嚴島神社 海上鳥居</span>
+            </div>
+            <div class="photo-placeholder h-40 bg-slate-100 rounded-lg flex flex-col items-center justify-center text-xs text-slate-400 p-2 text-center">
+                <span class="text-2xl mb-1">🛤️</span>
+                <span class="font-bold">尾道</span>
+                <span>千光寺俯瞰 瀨戶內海</span>
+            </div>
+            <div class="photo-placeholder h-40 bg-slate-100 rounded-lg flex flex-col items-center justify-center text-xs text-slate-400 p-2 text-center">
+                <span class="text-2xl mb-1">🏯</span>
+                <span class="font-bold">岡山 / 倉敷</span>
+                <span>後樂園或 美觀地區</span>
+            </div>
+            <div class="photo-placeholder h-40 bg-slate-100 rounded-lg flex flex-col items-center justify-center text-xs text-slate-400 p-2 text-center">
+                <span class="text-2xl mb-1">🍵</span>
+                <span class="font-bold">高松</span>
+                <span>栗林公園 特別名勝</span>
+            </div>
         </div>
 
         <!-- Footer -->
         <footer class="text-center text-slate-400 text-xs pb-10 border-t border-slate-100 pt-8">
             <p>2026 Hiroshima & Okayama Trip Planner ｜ 資料查核準確度：90%+</p>
-            <p class="mt-2">大和博物館將於 2026/04 重新開幕，祝旅途愉快！</p>
+            <p class="mt-2 text-slate-300">大和博物館將於 2026/04 重新開幕，祝旅途愉快！</p>
         </footer>
     </div>
 </body>
