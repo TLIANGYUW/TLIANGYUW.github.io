@@ -3,167 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>蔚藍菊島．執手之約：三日秘境與盛典巡禮</title>
-    <!-- 修復：確保 CDN 連結為純淨 URL 格式 -->
+    <title>蔚藍菊島．執手之約 - TLIANGYUW 旅行手冊</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* 修復：移除字體導入連結的語法錯誤 */
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
         
-        body { 
-            font-family: 'Noto Sans TC', sans-serif; 
-            background-color: #f1f5f9; 
-            -webkit-tap-highlight-color: transparent;
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #fcfaf2; 
+            color: #333;
+            scroll-behavior: smooth;
         }
+
+        /* 頂部視覺區 */
+        .hero-penghu {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1545464141-8636737f59f6?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
         .tab-content { display: none; }
-        .tab-content.active { display: block; animation: slideUp 0.4s ease-out; }
-        .active-tab { 
-            background-color: #0369a1; 
-            color: white !important; 
-            box-shadow: 0 10px 15px -3px rgba(3, 105, 161, 0.3);
-        }
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(20px); }
+        .tab-content.active { display: block; animation: fadeIn 0.5s ease-out; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .route-line::before { 
-            content: ''; position: absolute; left: 20px; top: 40px; 
-            width: 2px; height: calc(100% - 20px); background: #cbd5e1;
-            border-left: 2px dashed #cbd5e1;
+
+        .active-tab {
+            background-color: #0369a1;
+            color: white !important;
+            box-shadow: 0 4px 12px rgba(3, 105, 161, 0.2);
+        }
+
+        .itinerary-card {
+            background-color: white;
+            border: 1px solid #f1f5f9;
+            transition: all 0.3s ease;
+        }
+
+        .itinerary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        }
+
+        /* 路線虛線 */
+        .route-line::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 30px;
+            width: 2px;
+            height: calc(100% - 20px);
+            border-left: 2px dashed #e2e8f0;
         }
         .route-line:last-child::before { display: none; }
+
+        /* 捲軸樣式 */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #0369a1; border-radius: 10px; }
     </style>
 </head>
-<body class="text-slate-800 pb-20">
+<body class="antialiased pb-20">
 
-    <!-- Hero Section -->
-    <header class="bg-gradient-to-br from-sky-700 via-blue-800 to-indigo-900 text-white py-24 px-6 shadow-xl relative overflow-hidden text-center">
-        <div class="max-w-4xl mx-auto relative z-10">
-            <div class="inline-flex items-center bg-white/10 px-4 py-1 rounded-full text-[10px] font-bold tracking-[0.2em] mb-6 border border-white/20 uppercase">
-                A Journey of Azure & Love
+    <!-- 導航列 -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2 text-[#0369a1] font-bold text-xl">
+                <i class="fas fa-umbrella-beach"></i>
+                <span>菊島。漫步</span>
             </div>
-            <h1 class="text-4xl md:text-6xl font-black mb-6 drop-shadow-2xl text-balance tracking-tight">蔚藍菊島．執手之約</h1>
-            <p class="text-sky-100 max-w-2xl mx-auto text-sm md:text-base leading-relaxed opacity-90 text-balance font-light">
-                在海天一色的交界處，探尋散落在玄武岩間的秘境，<br class="hidden md:block">
-                並在花火升起之時，見證一場關於永恆的約定。
-            </p>
-        </div>
-        <div class="absolute -top-24 -left-24 w-64 h-64 bg-sky-400/20 rounded-full blur-[100px]"></div>
-        <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-indigo-500/10 rounded-full blur-[100px]"></div>
-    </header>
-
-    <!-- Tab Navigation -->
-    <nav class="sticky top-4 z-50 px-4 mt-[-2.5rem]">
-        <div class="max-w-4xl mx-auto bg-white/95 backdrop-blur-md p-1.5 rounded-[2rem] shadow-2xl flex gap-1 border border-white/40">
-            <button onclick="openTab(event, 'day1')" class="tab-link flex-1 py-4 px-2 text-center font-bold rounded-[1.5rem] transition-all duration-300 text-slate-400 active-tab text-xs md:text-sm">Day 1 壯麗北環</button>
-            <button onclick="openTab(event, 'day2')" class="tab-link flex-1 py-4 px-2 text-center font-bold rounded-[1.5rem] transition-all duration-300 text-slate-400 text-xs md:text-sm">Day 2 盛典人文</button>
-            <button onclick="openTab(event, 'day3')" class="tab-link flex-1 py-4 px-2 text-center font-bold rounded-[1.5rem] transition-all duration-300 text-slate-400 text-xs md:text-sm">Day 3 療癒南環</button>
-            <button onclick="openTab(event, 'map')" class="tab-link w-14 py-4 px-2 text-center font-bold rounded-[1.5rem] transition-all duration-300 text-slate-500"><i class="fa-solid fa-map"></i></button>
+            
+            <div class="flex items-center space-x-6">
+                <!-- 回首頁連結 -->
+                <a href="./index.html" class="flex items-center space-x-1 text-gray-600 hover:text-[#0369a1] transition-colors">
+                    <i class="fas fa-home text-sm"></i>
+                    <span class="font-medium text-sm md:text-base">回首頁</span>
+                </a>
+            </div>
         </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto p-4 mt-12">
+    <!-- Hero 區塊 -->
+    <header class="hero-penghu h-[45vh] flex items-center justify-center text-white pt-16">
+        <div class="text-center px-4">
+            <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold tracking-[0.2em] mb-4 inline-block uppercase border border-white/30">Azure Islands 2026</span>
+            <h1 class="text-4xl md:text-6xl font-black mb-4 tracking-widest drop-shadow-lg">蔚藍菊島．執手之約</h1>
+            <p class="text-lg md:text-xl font-light opacity-90">三日秘境與盛典巡禮 ｜ 澎湖深度行程</p>
+        </div>
+    </header>
+
+    <!-- Tab Navigation -->
+    <nav class="sticky top-20 z-40 px-4 -mt-8">
+        <div class="max-w-3xl mx-auto bg-white/95 backdrop-blur-md p-1.5 rounded-full shadow-xl flex gap-1 border border-gray-100">
+            <button onclick="openTab(event, 'day1')" class="tab-link flex-1 py-3 px-2 text-center font-bold rounded-full transition-all duration-300 text-slate-400 active-tab text-xs md:text-sm">D1 北環地質</button>
+            <button onclick="openTab(event, 'day2')" class="tab-link flex-1 py-3 px-2 text-center font-bold rounded-full transition-all duration-300 text-slate-400 text-xs md:text-sm">D2 盛典人文</button>
+            <button onclick="openTab(event, 'day3')" class="tab-link flex-1 py-3 px-2 text-center font-bold rounded-full transition-all duration-300 text-slate-400 text-xs md:text-sm">D3 療癒南環</button>
+            <button onclick="openTab(event, 'map')" class="tab-link w-12 py-3 px-2 text-center font-bold rounded-full transition-all duration-300 text-slate-400"><i class="fa-solid fa-map"></i></button>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 mt-16">
         
-        <!-- Day 1 Content: North Loop -->
+        <!-- Day 1 Content -->
         <section id="day1" class="tab-content active space-y-8">
-            <div class="bg-white rounded-[3rem] shadow-xl p-8 md:p-12 border border-slate-100">
-                <div class="mb-10 border-b border-slate-100 pb-8 text-center md:text-left">
-                    <span class="text-blue-600 font-bold text-xs tracking-widest uppercase">The Ancient Loop</span>
-                    <h2 class="text-3xl font-black text-slate-900 mt-2">D1：時光雕琢的地質長廊</h2>
+            <div class="itinerary-card rounded-[2.5rem] p-8 md:p-12 shadow-sm">
+                <div class="mb-10 border-b border-gray-50 pb-8">
+                    <span class="text-[#0369a1] font-black text-xs tracking-widest uppercase">The Ancient Loop</span>
+                    <h2 class="text-3xl font-black text-slate-800 mt-2">D1：時光雕琢的地質長廊</h2>
                 </div>
                 
-                <div class="space-y-0 text-sm">
-                    <div class="route-line relative pl-14 pb-8"><h3 class="font-bold text-slate-800">馬公機場 (啟程)</h3></div>
-                    <div class="route-line relative pl-14 pb-8"><h3 class="font-bold text-slate-800">後寮天堂路 (白沙秘境)</h3></div>
-                    <div class="route-line relative pl-14 pb-8"><h3 class="font-bold text-slate-800">跨海大橋 / 大菓葉玄武岩 / 二崁聚落</h3></div>
-                    <div class="route-line relative pl-14"><h3 class="font-bold text-slate-800">漁翁島燈塔 (西嶼盡頭賞落日)</h3></div>
+                <div class="space-y-6 relative">
+                    <div class="route-line relative pl-12 pb-8">
+                        <div class="absolute left-0 top-0 w-10 h-10 bg-sky-50 rounded-full flex items-center justify-center text-[#0369a1] z-10"><i class="fas fa-plane-arrival"></i></div>
+                        <h3 class="font-bold text-slate-800 text-lg">馬公機場 (啟程)</h3>
+                        <p class="text-slate-500 text-sm mt-1">領取租車，開啟菊島之旅</p>
+                    </div>
+                    <div class="route-line relative pl-12 pb-8">
+                        <div class="absolute left-0 top-0 w-10 h-10 bg-sky-50 rounded-full flex items-center justify-center text-[#0369a1] z-10"><i class="fas fa-road"></i></div>
+                        <h3 class="font-bold text-slate-800 text-lg">後寮天堂路</h3>
+                        <p class="text-slate-500 text-sm mt-1">白沙秘境，潮汐間的海中長廊</p>
+                    </div>
+                    <div class="route-line relative pl-12 pb-8">
+                        <div class="absolute left-0 top-0 w-10 h-10 bg-sky-50 rounded-full flex items-center justify-center text-[#0369a1] z-10"><i class="fas fa-bridge"></i></div>
+                        <h3 class="font-bold text-slate-800 text-lg">跨海大橋 / 大菓葉玄武岩</h3>
+                        <p class="text-slate-500 text-sm mt-1">壯麗的六角柱狀地質與二崁聚落人文</p>
+                    </div>
+                    <div class="route-line relative pl-12">
+                        <div class="absolute left-0 top-0 w-10 h-10 bg-sky-50 rounded-full flex items-center justify-center text-[#0369a1] z-10"><i class="fas fa-sun"></i></div>
+                        <h3 class="font-bold text-slate-800 text-lg">漁翁島燈塔</h3>
+                        <p class="text-slate-500 text-sm mt-1">西嶼盡頭，欣賞絕美日落賦歸</p>
+                    </div>
                 </div>
 
-                <div class="mt-12">
-                    <h4 class="text-sm font-bold text-slate-400 mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-route text-sky-500"></i> 本日漫行路線
-                    </h4>
-                    <div class="rounded-[2rem] overflow-hidden shadow-lg border-2 border-slate-50 h-80">
-                        <iframe width="100%" height="100%" frameborder="0" src="https://maps.google.com/maps?saddr=澎湖機場&daddr=後寮天堂路+to:澎湖跨海大橋+to:大菓葉柱狀玄武岩+to:二崁聚落+to:漁翁島燈塔&output=embed"></iframe>
-                    </div>
+                <div class="mt-12 rounded-3xl overflow-hidden border border-gray-100 h-80 shadow-inner">
+                    <iframe width="100%" height="100%" frameborder="0" src="https://maps.google.com/maps?saddr=澎湖機場&daddr=後寮天堂路+to:澎湖跨海大橋+to:大菓葉柱狀玄武岩+to:二崁聚落+to:漁翁島燈塔&output=embed"></iframe>
                 </div>
             </div>
         </section>
 
-        <!-- Day 2 Content: East & City (Sheraton) -->
+        <!-- Day 2 Content -->
         <section id="day2" class="tab-content space-y-8">
-            <div class="bg-white rounded-[3rem] shadow-xl p-8 md:p-12 border border-slate-100">
-                <div class="mb-10 border-b border-slate-100 pb-8 text-center md:text-left">
-                    <span class="text-rose-600 font-bold text-xs tracking-widest uppercase">Covenant & Culture</span>
-                    <h2 class="text-3xl font-black text-slate-900 mt-2">D2：分海奇蹟與執手盛典</h2>
+            <div class="itinerary-card rounded-[2.5rem] p-8 md:p-12 shadow-sm">
+                <div class="mb-10 border-b border-gray-50 pb-8">
+                    <span class="text-rose-500 font-black text-xs tracking-widest uppercase">Covenant & Culture</span>
+                    <h2 class="text-3xl font-black text-slate-800 mt-2">D2：分海奇蹟與執手盛典</h2>
                 </div>
 
-                <div class="space-y-0 text-sm">
-                    <div class="route-line relative pl-14 pb-8"><h3 class="font-bold text-slate-800">馬公舊城 (出發)</h3></div>
-                    <div class="route-line relative pl-14 pb-8"><h3 class="font-bold text-slate-800">奎壁山摩西分海 (潮汐律動)</h3></div>
-                    <div class="route-line relative pl-14 pb-8"><h3 class="font-bold text-slate-800">中央老街 / 天后宮尋古</h3></div>
-                    <div class="route-line relative pl-14">
-                        <h3 class="font-bold text-rose-700">澎湖福朋喜來登酒店 (盛大婚宴)</h3>
+                <div class="space-y-6 relative mb-12">
+                    <div class="route-line relative pl-12 pb-8">
+                        <div class="absolute left-0 top-0 w-10 h-10 bg-rose-50 rounded-full flex items-center justify-center text-rose-500 z-10"><i class="fas fa-city"></i></div>
+                        <h3 class="font-bold text-slate-800 text-lg">馬公舊城區</h3>
+                    </div>
+                    <div class="route-line relative pl-12 pb-8">
+                        <div class="absolute left-0 top-0 w-10 h-10 bg-rose-50 rounded-full flex items-center justify-center text-rose-500 z-10"><i class="fas fa-water"></i></div>
+                        <h3 class="font-bold text-slate-800 text-lg">奎壁山摩西分海</h3>
+                        <p class="text-slate-500 text-sm mt-1">觀察潮汐律動，見證海中開路</p>
+                    </div>
+                    <div class="route-line relative pl-12 pb-8">
+                        <div class="absolute left-0 top-0 w-10 h-10 bg-rose-50 rounded-full flex items-center justify-center text-rose-500 z-10"><i class="fas fa-temple"></i></div>
+                        <h3 class="font-bold text-slate-800 text-lg">中央老街 / 天后宮尋古</h3>
+                    </div>
+                    <div class="route-line relative pl-12">
+                        <div class="absolute left-0 top-0 w-10 h-10 bg-rose-100 rounded-full flex items-center justify-center text-rose-600 z-10 shadow-sm"><i class="fas fa-heart"></i></div>
+                        <h3 class="font-bold text-rose-700 text-xl">澎湖福朋喜來登酒店</h3>
+                        <p class="text-slate-500 text-sm mt-1">盛大婚宴，幸福見證</p>
                     </div>
                 </div>
 
-                <div class="mt-10 bg-rose-600 p-8 rounded-[2.5rem] text-white shadow-xl relative overflow-hidden text-center md:text-left">
-                    <div class="relative z-10 text-balance">
-                        <span class="text-[10px] font-black tracking-widest bg-white/20 px-3 py-1 rounded-full mb-4 inline-block uppercase text-white">Wedding Day</span>
-                        <h3 class="text-2xl font-black mb-2 text-balance">幸福見證：福朋喜來登</h3>
-                        <p class="text-rose-100 text-sm mb-4">這不只是一場婚宴，更是一次與眾多好友共享的澎湖盛典。</p>
-                        <div class="flex items-center justify-center md:justify-start gap-2 text-xs font-bold bg-white/10 p-3 rounded-xl border border-white/20">
-                            <i class="fa-solid fa-location-dot"></i>
+                <!-- 婚宴特別區塊 -->
+                <div class="bg-rose-50 p-8 rounded-[2.5rem] border border-rose-100 relative overflow-hidden">
+                    <i class="fas fa-wine-glass absolute right-8 bottom-8 text-rose-200 text-8xl opacity-30"></i>
+                    <div class="relative z-10">
+                        <span class="text-[10px] font-black tracking-widest bg-rose-500 text-white px-3 py-1 rounded-full mb-4 inline-block uppercase">Wedding Gala</span>
+                        <h3 class="text-2xl font-black text-rose-900 mb-2">幸福見證：福朋喜來登</h3>
+                        <p class="text-rose-700 text-sm mb-6 leading-relaxed max-w-md">這不只是一場婚宴，更是與好友共享的菊島假期。在高級飯店享受精緻佳餚與難忘時光。</p>
+                        <div class="inline-flex items-center gap-2 text-xs font-bold text-rose-600 bg-white px-4 py-2 rounded-xl shadow-sm">
+                            <i class="fas fa-location-dot"></i>
                             <span>馬公市新店路197號</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="mt-12">
-                    <h4 class="text-sm font-bold text-slate-400 mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-route text-rose-500"></i> 本日人文動線
-                    </h4>
-                    <div class="rounded-[2rem] overflow-hidden shadow-lg border-2 border-slate-50 h-80">
-                        <iframe width="100%" height="100%" frameborder="0" src="https://maps.google.com/maps?saddr=馬公市區&daddr=奎壁山摩西分海+to:馬公天后宮+to:澎湖福朋喜來登酒店&output=embed"></iframe>
-                    </div>
+                <div class="mt-12 rounded-3xl overflow-hidden border border-gray-100 h-80 shadow-inner">
+                    <iframe width="100%" height="100%" frameborder="0" src="https://maps.google.com/maps?saddr=馬公市區&daddr=奎壁山摩西分海+to:馬公天后宮+to:澎湖福朋喜來登酒店&output=embed"></iframe>
                 </div>
             </div>
         </section>
 
-        <!-- Day 3 Content: South Loop -->
+        <!-- Day 3 Content -->
         <section id="day3" class="tab-content space-y-8">
-            <div class="bg-white rounded-[3rem] shadow-xl p-8 md:p-12 border border-slate-100">
-                <div class="mb-10 border-b border-slate-100 pb-8 text-center md:text-left">
-                    <span class="text-emerald-600 font-bold text-xs tracking-widest uppercase">The Whispering Waves</span>
-                    <h2 class="text-3xl font-black text-slate-900 mt-2">D3：南環海岸的最後溫柔</h2>
+            <div class="itinerary-card rounded-[2.5rem] p-8 md:p-12 shadow-sm">
+                <div class="mb-10 border-b border-gray-50 pb-8">
+                    <span class="text-emerald-600 font-black text-xs tracking-widest uppercase">The Whispering Waves</span>
+                    <h2 class="text-3xl font-black text-slate-800 mt-2">D3：南環海岸的最後溫柔</h2>
                 </div>
 
-                <div class="space-y-0 text-sm">
-                    <div class="route-line relative pl-14 pb-8"><h3 class="font-bold text-slate-800">馬公港口 (出發)</h3></div>
-                    <div class="route-line relative pl-14 pb-8"><h3 class="font-bold text-slate-800">風櫃聽濤 / 幽浮涼亭</h3></div>
-                    <div class="route-line relative pl-14 pb-8"><h3 class="font-bold text-slate-800">嵵裡沙灘 / 山水沙灘 / 30高地</h3></div>
-                    <div class="route-line relative pl-14"><h3 class="font-bold text-slate-800">馬公機場 (帶著回憶賦歸)</h3></div>
-                </div>
-
-                <div class="mt-12">
-                    <h4 class="text-sm font-bold text-slate-400 mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-route text-emerald-500"></i> 本日療癒路線
-                    </h4>
-                    <div class="rounded-[2rem] overflow-hidden shadow-lg border-2 border-slate-50 h-80">
-                        <iframe width="100%" height="100%" frameborder="0" src="https://maps.google.com/maps?saddr=馬公市區&daddr=風櫃洞+to:嵵裡沙灘+to:山水沙灘+to:山水30高地+to:澎湖機場&output=embed"></iframe>
+                <div class="space-y-6 relative">
+                    <div class="route-line relative pl-12 pb-8">
+                        <div class="absolute left-0 top-0 w-10 h-10 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-600 z-10"><i class="fas fa-anchor"></i></div>
+                        <h3 class="font-bold text-slate-800 text-lg">馬公港口 (出發)</h3>
                     </div>
+                    <div class="route-line relative pl-12 pb-8">
+                        <div class="absolute left-0 top-0 w-10 h-10 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-600 z-10"><i class="fas fa-wind"></i></div>
+                        <h3 class="font-bold text-slate-800 text-lg">風櫃聽濤</h3>
+                        <p class="text-slate-500 text-sm mt-1">幽浮涼亭與玄武岩風櫃洞的天然聲響</p>
+                    </div>
+                    <div class="route-line relative pl-12 pb-8">
+                        <div class="absolute left-0 top-0 w-10 h-10 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-600 z-10"><i class="fas fa-umbrella-beach"></i></div>
+                        <h3 class="font-bold text-slate-800 text-lg">山水沙灘 / 30高地</h3>
+                        <p class="text-slate-500 text-sm mt-1">在細緻的金黃沙灘留下最後足跡</p>
+                    </div>
+                    <div class="route-line relative pl-12">
+                        <div class="absolute left-0 top-0 w-10 h-10 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-600 z-10"><i class="fas fa-plane-departure"></i></div>
+                        <h3 class="font-bold text-slate-800 text-lg">馬公機場 (帶著回憶賦歸)</h3>
+                    </div>
+                </div>
+
+                <div class="mt-12 rounded-3xl overflow-hidden border border-gray-100 h-80 shadow-inner">
+                    <iframe width="100%" height="100%" frameborder="0" src="https://maps.google.com/maps?saddr=馬公市區&daddr=風櫃洞+to:嵵裡沙灘+to:山水沙灘+to:山水30高地+to:澎湖機場&output=embed"></iframe>
                 </div>
             </div>
         </section>
 
-        <!-- Map Overview Tab -->
+        <!-- Map Overview -->
         <section id="map" class="tab-content">
-            <div class="bg-white rounded-[3rem] shadow-xl p-8 border border-slate-100">
-                <h2 class="text-2xl font-black mb-8 flex items-center gap-3 text-sky-700">
+            <div class="itinerary-card rounded-[2.5rem] p-8 shadow-sm">
+                <h2 class="text-2xl font-black mb-8 flex items-center gap-3 text-[#0369a1]">
                     <i class="fa-solid fa-map-location-dot"></i> 全島導覽總覽
                 </h2>
-                <div class="rounded-[2.5rem] overflow-hidden shadow-inner h-[500px] border-4 border-slate-50 bg-slate-100">
+                <div class="rounded-[2rem] overflow-hidden shadow-inner h-[500px] border-2 border-gray-50">
                     <iframe width="100%" height="100%" frameborder="0" src="https://maps.google.com/maps?saddr=馬公機場&daddr=漁翁島燈塔+to:奎壁山摩西分海+to:澎湖福朋喜來登酒店+to:風櫃洞+to:馬公機場&output=embed"></iframe>
                 </div>
             </div>
@@ -171,9 +242,19 @@
 
     </main>
 
-    <footer class="text-center py-20 text-slate-400 text-[10px] tracking-[0.4em] uppercase">
-        Visual Route Guide • Memories of Penghu • 2026
+    <footer class="text-center py-20 border-t border-gray-100 mt-20">
+        <div class="flex items-center justify-center space-x-2 text-[#0369a1] font-bold text-xl mb-4">
+            <i class="fas fa-seedling text-[#d4a373]"></i>
+            <span>TLIANGYUW</span>
+        </div>
+        <p class="text-gray-400 text-[10px] tracking-[0.4em] uppercase font-bold">Visual Route Guide • Memories of Penghu • 2026</p>
     </footer>
+
+    <!-- 返回頂部按鈕 -->
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+            class="fixed bottom-8 right-8 bg-[#0369a1] text-white w-12 h-12 rounded-full shadow-lg hover:bg-[#0284c7] transform hover:scale-110 transition-all flex items-center justify-center z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script>
         function openTab(evt, tabName) {
