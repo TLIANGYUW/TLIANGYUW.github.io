@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 京都秋季深度之旅 - 8天7夜完整行程</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #fcfaf2; 
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* 頂部視覺區 */
+        .hero-autumn {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .itinerary-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .itinerary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .tabelog-tag {
+            background-color: #fff7ed;
+            color: #c2410c;
+            border: 1px solid #ffedd5;
+        }
+
+        /* 滾動條樣式 */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #d4a373; border-radius: 10px; }
+    </style>
+    <script>
+        // 圖片載入失敗時的處理函數
+        function imgError(image) {
+            image.onerror = null;
+            image.src = "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=60";
+            return true;
+        }
+    </script>
+</head>
+<body class="antialiased">
+
+    <!-- 導航列 -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2 text-[#d4a373] font-bold text-xl">
+                <i class="fas fa-leaf"></i>
+                <span>京都。漫步</span>
+            </div>
+            
+            <div class="flex items-center space-x-6">
+                <!-- 回首頁連結 -->
+                <a href="index.html" class="flex items-center space-x-1 text-gray-600 hover:text-[#d4a373] transition-colors">
+                    <i class="fas fa-home text-sm"></i>
+                    <span class="font-medium">回首頁</span>
+                </a>
+                <a href="#itinerary" class="hidden md:block text-gray-600 hover:text-[#d4a373] transition-colors font-medium">8日行程</a>
+                <a href="#tips" class="hidden md:block text-gray-600 hover:text-[#d4a373] transition-colors font-medium">旅行建議</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 區塊 -->
+    <header class="hero-autumn h-[50vh] flex items-center justify-center text-white pt-16">
+        <div class="text-center px-4">
+            <span class="bg-[#ea580c] px-3 py-1 rounded-full text-xs font-bold tracking-widest mb-4 inline-block uppercase shadow-lg">Autumn Deep Tour 2026</span>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-widest">2026 京都・滋賀・奈良</h1>
+            <p class="text-lg md:text-xl font-light opacity-90">紅葉・山林・古都慢行 ｜ 8天7夜完整記錄</p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-16" id="itinerary">
+        
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold inline-block border-b-4 border-[#d4a373] pb-2 text-slate-800">2026 秋季深度行程規劃</h2>
+            <p class="mt-4 text-gray-500 font-medium">11.14 (六) — 11.21 (六) ｜ 探訪紅葉最前線</p>
+        </div>
+
+        <div class="space-y-12">
+            
+            <!-- Day 1 -->
+            <div class="itinerary-card bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-sm border border-gray-50">
+                <div class="md:w-1/3 h-64 md:h-auto overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1624253321171-1be53e12f5f4?auto=format&fit=crop&w=800&q=80" 
+                         alt="京都街道" onerror="imgError(this);" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-8">
+                    <div class="text-[#ea580c] font-bold mb-2 tracking-tighter text-sm uppercase">Day 01 - 11/14 (六)</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">京都初抵：街道漫步</h3>
+                    <ul class="space-y-3 text-gray-600 text-sm md:text-base mb-6">
+                        <li class="flex items-start"><i class="fas fa-leaf mt-1 mr-2 text-[#d4a373]"></i>華航 11:50 抵達，前往飯店 Check-in</li>
+                        <li class="flex items-start"><i class="fas fa-leaf mt-1 mr-2 text-[#d4a373]"></i>四條河原町秋夜街道漫步，感受古都節奏</li>
+                        <li class="flex items-start"><i class="fas fa-info-circle mt-1 mr-2 text-blue-400"></i>此時日落約 16:45。Tips：對照歌詞走訪「姉三六角蛸錦」。</li>
+                    </ul>
+                    <a href="https://tabelog.com/kyoto/A2601/A260201/26001002/" target="_blank" class="tabelog-tag px-3 py-1 rounded-md text-sm font-medium hover:bg-orange-100 transition-colors">
+                        <i class="fas fa-utensils mr-1"></i> いづう (鯖姿壽司)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="itinerary-card bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-sm border border-gray-50">
+                <div class="md:w-1/3 h-64 md:h-auto overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1590233649103-da037ca5a7c3?auto=format&fit=crop&w=800&q=80" 
+                         alt="琵琶湖" onerror="imgError(this);" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-8">
+                    <div class="text-[#ea580c] font-bold mb-2 tracking-tighter text-sm uppercase">Day 02 - 11/15 (日)</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">滋賀琵琶湖：紅葉水路</h3>
+                    <ul class="space-y-3 text-gray-600 text-sm md:text-base mb-6">
+                        <li class="flex items-start"><i class="fas fa-leaf mt-1 mr-2 text-[#d4a373]"></i>白鬚神社：欣賞水中鳥居的壯闊與寧靜</li>
+                        <li class="flex items-start"><i class="fas fa-leaf mt-1 mr-2 text-[#d4a373]"></i>近江八幡：八幡堀楓紅水路，享受水鄉風情</li>
+                        <li class="flex items-start"><i class="fas fa-exclamation-triangle mt-1 mr-2 text-orange-400"></i>週日避開京都市區人潮。湖邊風大需防寒。</li>
+                    </ul>
+                    <a href="https://tabelog.com/shiga/A2501/A250102/25000010/" target="_blank" class="tabelog-tag px-3 py-1 rounded-md text-sm font-medium hover:bg-orange-100 transition-colors">
+                        <i class="fas fa-utensils mr-1"></i> まるたけ (暖心近江牛)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="itinerary-card bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-sm border border-orange-100">
+                <div class="md:w-1/3 h-64 md:h-auto overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1621506821199-a99a749975a8?auto=format&fit=crop&w=800&q=80" 
+                         alt="貴船神社" onerror="imgError(this);" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-8 bg-orange-50/20">
+                    <div class="text-[#ea580c] font-bold mb-2 tracking-tighter text-sm uppercase border-l-4 border-orange-500 pl-2">Day 03 - 11/16 (一) ｜ 洛北見頃</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">洛北紅葉隧道與夜間點燈</h3>
+                    <ul class="space-y-3 text-gray-600 text-sm md:text-base mb-6">
+                        <li class="flex items-start"><i class="fas fa-leaf mt-1 mr-2 text-[#d4a373]"></i>鞍馬寺：穿越古老的森林步道</li>
+                        <li class="flex items-start"><i class="fas fa-leaf mt-1 mr-2 text-[#d4a373]"></i>貴船神社：參拜與欣賞著名的紅色燈籠與夜楓</li>
+                        <li class="flex items-start"><i class="fas fa-thermometer-quarter mt-1 mr-2 text-blue-400"></i>洛北氣溫較低。夜間點燈時請務必加強保暖。</li>
+                    </ul>
+                    <a href="https://tabelog.com/kyoto/A2601/A260502/26001556/" target="_blank" class="tabelog-tag px-3 py-1 rounded-md text-sm font-medium hover:bg-orange-100 transition-colors">
+                        <i class="fas fa-utensils mr-1"></i> ひろ文 (川床秋季料理)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="itinerary-card bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-sm border border-gray-50">
+                <div class="md:w-1/3 h-64 md:h-auto overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=80" 
+                         alt="金閣寺" onerror="imgError(this);" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-8">
+                    <div class="text-[#ea580c] font-bold mb-2 tracking-tighter text-sm uppercase">Day 04 - 11/17 (二)</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">皇家楓林與金閣閃耀</h3>
+                    <ul class="space-y-3 text-gray-600 text-sm md:text-base mb-6">
+                        <li class="flex items-start"><i class="fas fa-leaf mt-1 mr-2 text-[#d4a373]"></i>修學院離宮：絕美的皇家借景庭園（預約制）</li>
+                        <li class="flex items-start"><i class="fas fa-leaf mt-1 mr-2 text-[#d4a373]"></i>金閣寺：夕陽照射下閃耀的舍利殿</li>
+                        <li class="flex items-start"><i class="fas fa-clock mt-1 mr-2 text-blue-400"></i>離宮預約難度高，需提前於官網搶票。</li>
+                    </ul>
+                    <a href="https://tabelog.com/kyoto/A2601/A260503/26000201/" target="_blank" class="tabelog-tag px-3 py-1 rounded-md text-sm font-medium hover:bg-orange-100 transition-colors">
+                        <i class="fas fa-utensils mr-1"></i> 鳥岩樓 (親子丼)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="itinerary-card bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-sm border border-gray-50">
+                <div class="md:w-1/3 h-64 md:h-auto overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1608442220478-f60879c5f2b8?auto=format&fit=crop&w=800&q=80" 
+                         alt="南禪寺" onerror="imgError(this);" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-8">
+                    <div class="text-[#ea580c] font-bold mb-2 tracking-tighter text-sm uppercase">Day 05 - 11/18 (三)</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">洛東散策：哲學與紅葉</h3>
+                    <ul class="space-y-3 text-gray-600 text-sm md:text-base mb-6">
+                        <li class="flex items-start"><i class="fas fa-leaf mt-1 mr-2 text-[#d4a373]"></i>銀閣寺至哲學之道的詩意慢步</li>
+                        <li class="flex items-start"><i class="fas fa-leaf mt-1 mr-2 text-[#d4a373]"></i>南禪寺：水路閣與巨大的三門紅葉景色</li>
+                        <li class="flex items-start"><i class="fas fa-users mt-1 mr-2 text-blue-400"></i>熱門景點建議早起，避開團客人潮。</li>
+                    </ul>
+                    <a href="https://tabelog.com/kyoto/A2601/A260301/26000847/" target="_blank" class="tabelog-tag px-3 py-1 rounded-md text-sm font-medium hover:bg-orange-100 transition-colors">
+                        <i class="fas fa-utensils mr-1"></i> 日之出烏龍麵
+                    </a>
+                </div>
+            </div>
+
+            <!-- Day 6 -->
+            <div class="itinerary-card bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-sm border border-gray-50">
+                <div class="md:w-1/3 h-64 md:h-auto overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1610473215682-628d9c22e468?auto=format&fit=crop&w=800&q=80" 
+                         alt="宇治" onerror="imgError(this);" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-8">
+                    <div class="text-[#ea580c] font-bold mb-2 tracking-tighter text-sm uppercase">Day 06 - 11/19 (四)</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">宇治茶香與稻荷夕夜</h3>
+                    <ul class="space-y-3 text-gray-600 text-sm md:text-base mb-6">
+                        <li class="flex items-start"><i class="fas fa-leaf mt-1 mr-2 text-[#d4a373]"></i>平等院：鳳凰堂在水池中的倒影</li>
+                        <li class="flex items-start"><i class="fas fa-leaf mt-1 mr-2 text-[#d4a373]"></i>伏見稻荷：16:30 後點燈的神祕氛圍</li>
+                    </ul>
+                    <a href="https://tabelog.com/kyoto/A2601/A260701/26000722/" target="_blank" class="tabelog-tag px-3 py-1 rounded-md text-sm font-medium hover:bg-orange-100 transition-colors">
+                        <i class="fas fa-utensils mr-1"></i> 中村藤吉 (秋季限定)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Day 7 -->
+            <div class="itinerary-card bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-sm border border-gray-50">
+                <div class="md:w-1/3 h-64 md:h-auto overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1571406653303-a21808061453?auto=format&fit=crop&w=800&q=80" 
+                         alt="奈良" onerror="imgError(this);" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-8">
+                    <div class="text-[#ea580c] font-bold mb-2 tracking-tighter text-sm uppercase">Day 07 - 11/20 (五)</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">奈良古都與糾之森紅葉</h3>
+                    <ul class="space-y-3 text-gray-600 text-sm md:text-base mb-6">
+                        <li class="flex items-start"><i class="fas fa-leaf mt-1 mr-2 text-[#d4a373]"></i>奈良公園：與小鹿在紅葉下互動</li>
+                        <li class="flex items-start"><i class="fas fa-leaf mt-1 mr-2 text-[#d4a373]"></i>下鴨神社：漫步在「糾之森」緩慢轉紅的林間</li>
+                    </ul>
+                    <a href="https://tabelog.com/nara/A2901/A290101/29000001/" target="_blank" class="tabelog-tag px-3 py-1 rounded-md text-sm font-medium hover:bg-orange-100 transition-colors">
+                        <i class="fas fa-utensils mr-1"></i> 志津香釜飯
+                    </a>
+                </div>
+            </div>
+
+            <!-- Day 8 -->
+            <div class="itinerary-card bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-sm border border-gray-50">
+                <div class="md:w-1/3 h-64 md:h-auto overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?auto=format&fit=crop&w=800&q=80" 
+                         alt="回程" onerror="imgError(this);" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-8">
+                    <div class="text-[#ea580c] font-bold mb-2 tracking-tighter text-sm uppercase">Day 08 - 11/21 (六)</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">錦市場採買與歸程</h3>
+                    <ul class="space-y-3 text-gray-600 text-sm md:text-base mb-6">
+                        <li class="flex items-start"><i class="fas fa-leaf mt-1 mr-2 text-[#d4a373]"></i>錦市場：採購松茸、栗子等秋季旬味</li>
+                        <li class="flex items-start"><i class="fas fa-plane mt-1 mr-2 text-blue-400"></i>15:30 搭乘 Haruka 列車前往機場。</li>
+                    </ul>
+                    <span class="text-xs text-gray-400 italic">2026 秋季之旅在此圓滿結束，期待下次相會</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 提示區塊 -->
+        <div id="tips" class="mt-20 p-8 bg-[#d4a373]/10 rounded-3xl border border-[#d4a373]/20">
+            <h3 class="text-2xl font-bold mb-6 text-[#8b5e34] text-center">🍂 秋季行程備忘錄</h3>
+            <div class="grid md:grid-cols-2 gap-8 text-gray-700 text-sm">
+                <div class="space-y-4">
+                    <p class="font-bold text-orange-700 flex items-center"><i class="fas fa-mitten mr-2"></i> 穿著建議</p>
+                    <p class="leading-relaxed">11月中旬京都日夜溫差極大。白天約 15-18 度，夜晚可能降至 5-8 度。請準備輕量羽絨、發熱衣及方便脫下的圍巾。</p>
+                </div>
+                <div class="space-y-4">
+                    <p class="font-bold text-orange-700 flex items-center"><i class="fas fa-ticket-alt mr-2"></i> 交通提醒</p>
+                    <p class="leading-relaxed">此行程包含滋賀與奈良，建議使用「JR 關西廣域 Pass」以節省交通成本，並預先下載 Google Maps 離線地圖。</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center space-x-2 text-[#d4a373] font-bold text-2xl mb-4">
+                <i class="fas fa-leaf"></i>
+                <span>京都。漫步</span>
+            </div>
+            <p class="text-gray-400 text-xs tracking-widest uppercase mb-4">© 2026 Kyoto Autumn Planner</p>
+            <div class="flex justify-center space-x-6 text-2xl text-gray-500">
+                <i class="fab fa-instagram hover:text-white cursor-pointer transition-colors"></i>
+                <i class="fab fa-facebook hover:text-white cursor-pointer transition-colors"></i>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回頂部按鈕 -->
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+            class="fixed bottom-8 right-8 bg-[#d4a373] text-white w-12 h-12 rounded-full shadow-lg hover:bg-[#b88b5c] transform hover:scale-110 transition-all flex items-center justify-center z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+</body>
+</html>
