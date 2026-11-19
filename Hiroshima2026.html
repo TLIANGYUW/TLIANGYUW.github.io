@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 廣島五天四夜自由行｜西軸零折返行程手冊</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Google Fonts: Noto Sans TC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .tab-active {
+      background-color: #991b1b;
+      color: #ffffff;
+      border-color: #991b1b;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-red-800 selection:text-white">
+
+  <!-- Top Navigation -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-red-800 text-white font-bold shadow-sm">
+          <i class="fa-solid fa-torii-gate"></i>
+        </span>
+        <div>
+          <h1 class="text-base sm:text-lg font-bold text-slate-900 leading-tight">2026 廣島・岩國・宮島</h1>
+          <p class="text-xs text-slate-500">12/04 (五) – 12/08 (二)｜西軸單線零折返</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-5 text-sm font-medium text-slate-600">
+        <a href="#itinerary" class="hover:text-red-800 transition">每日行程</a>
+        <a href="#tide" class="hover:text-red-800 transition">宮島潮汐</a>
+        <a href="#budget" class="hover:text-red-800 transition">車資精算</a>
+        <a href="#dining" class="hover:text-red-800 transition">預約名店</a>
+        <a href="#checklist" class="hover:text-red-800 transition">行前清單</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-slate-900 via-red-950 to-slate-900 text-white">
+    <div class="max-w-5xl mx-auto px-4 py-10 sm:py-14">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-medium text-amber-200 mb-4">
+        <i class="fa-solid fa-compass"></i>
+        <span>JR 山陽本線西軸推進・全線一車直達免轉乘</span>
+      </div>
+      <h2 class="text-2xl sm:text-4xl font-black tracking-tight mb-3">
+        廣島五天四夜精準自由行手冊
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base max-w-2xl leading-relaxed mb-8">
+        以直結 JR 廣島站新幹線口的「廣島格蘭比亞酒店」為核心據點，鎖定 12/7 大潮 329 cm 捕捉嚴島神社海上社殿，並延伸至山口岩國錦帶橋，全程使用 Apple Pay Suica 感應通行。
+      </p>
+
+      <!-- 4 Key Summary Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+        <div class="bg-white/10 backdrop-blur border border-white/15 rounded-xl p-4">
+          <div class="flex items-center justify-between text-amber-300 text-xs font-semibold mb-1.5">
+            <span>中華航空早去早回</span>
+            <i class="fa-solid fa-plane-departure"></i>
+          </div>
+          <p class="text-sm font-bold text-white">去程 12/4 CI112 (07:10–10:25)</p>
+          <p class="text-sm font-bold text-white">回程 12/8 CI113 (11:25–13:25)</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur border border-white/15 rounded-xl p-4">
+          <div class="flex items-center justify-between text-emerald-300 text-xs font-semibold mb-1.5">
+            <span>連住四晚據點</span>
+            <i class="fa-solid fa-hotel"></i>
+          </div>
+          <p class="text-sm font-bold text-white">廣島格蘭比亞酒店</p>
+          <p class="text-xs text-slate-300 mt-0.5">直結廣島站新幹線口（北口）</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur border border-white/15 rounded-xl p-4">
+          <div class="flex items-center justify-between text-sky-300 text-xs font-semibold mb-1.5">
+            <span>宮島最佳大潮登島</span>
+            <i class="fa-solid fa-water"></i>
+          </div>
+          <p class="text-sm font-bold text-white">12/7 (週一) 08:48 滿潮</p>
+          <p class="text-xs text-slate-300 mt-0.5">潮位 329 cm（海上社殿絕景）</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur border border-white/15 rounded-xl p-4">
+          <div class="flex items-center justify-between text-rose-300 text-xs font-semibold mb-1.5">
+            <span>五日全交通費總計</span>
+            <i class="fa-brands fa-apple"></i>
+          </div>
+          <p class="text-sm font-bold text-white">¥7,200 日圓 / 人</p>
+          <p class="text-xs text-slate-300 mt-0.5">全程 Apple Pay Suica（免買周遊券）</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-5xl mx-auto px-4 py-8 space-y-12">
+
+    <!-- Section 1: Daily Itinerary -->
+    <section id="itinerary">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-5">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-red-800">Daily Schedule</span>
+          <h3 class="text-xl sm:text-2xl font-bold text-slate-900">五日零折返詳細動線</h3>
+        </div>
+        <!-- Filter Buttons -->
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1" id="day-tabs">
+          <button onclick="filterDay('all')" data-day="all" class="day-tab tab-active px-3.5 py-1.5 rounded-full text-xs font-bold border border-slate-300 whitespace-nowrap transition">全部五日</button>
+          <button onclick="filterDay('day1')" data-day="day1" class="day-tab bg-white text-slate-700 hover:bg-slate-100 px-3.5 py-1.5 rounded-full text-xs font-bold border border-slate-300 whitespace-nowrap transition">Day 1｜12/4</button>
+          <button onclick="filterDay('day2')" data-day="day2" class="day-tab bg-white text-slate-700 hover:bg-slate-100 px-3.5 py-1.5 rounded-full text-xs font-bold border border-slate-300 whitespace-nowrap transition">Day 2｜12/5</button>
+          <button onclick="filterDay('day3')" data-day="day3" class="day-tab bg-white text-slate-700 hover:bg-slate-100 px-3.5 py-1.5 rounded-full text-xs font-bold border border-slate-300 whitespace-nowrap transition">Day 3｜12/6</button>
+          <button onclick="filterDay('day4')" data-day="day4" class="day-tab bg-white text-slate-700 hover:bg-slate-100 px-3.5 py-1.5 rounded-full text-xs font-bold border border-slate-300 whitespace-nowrap transition">Day 4｜12/7</button>
+          <button onclick="filterDay('day5')" data-day="day5" class="day-tab bg-white text-slate-700 hover:bg-slate-100 px-3.5 py-1.5 rounded-full text-xs font-bold border border-slate-300 whitespace-nowrap transition">Day 5｜12/8</button>
+        </div>
+      </div>
+
+      <div class="space-y-6" id="itinerary-cards">
+
+        <!-- Day 1 -->
+        <article data-day-card="day1" class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="bg-slate-900 text-white px-5 py-3.5 flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-3">
+              <span class="px-2.5 py-0.5 rounded bg-red-700 text-xs font-black">DAY 1</span>
+              <h4 class="font-bold text-base sm:text-lg">12/4 (週五)｜抵達廣島・車站步行圈雙名勝</h4>
+            </div>
+            <span class="text-xs text-amber-300 font-medium"><i class="fa-solid fa-yen-sign mr-1"></i>當日車資：¥1,740</span>
+          </div>
+          <div class="p-5 space-y-4">
+            <div class="flex gap-3.5">
+              <div class="w-24 shrink-0 text-xs font-bold text-red-800 pt-0.5">10:25 – 12:10</div>
+              <div class="text-sm text-slate-700">
+                <p class="font-bold text-slate-900">華航 CI112 抵達廣島機場 → 利木津巴士赴廣島站</p>
+                <p class="text-slate-600 mt-0.5">機場 2 號月台搭乘直達利木津巴士（車程 50 分鐘、¥1,500，可銜接 10:55 / 11:10 / 11:20 班次），抵達廣島站新幹線口後先至「廣島格蘭比亞酒店」寄放行李。</p>
+              </div>
+            </div>
+            <div class="flex gap-3.5 border-t border-slate-100 pt-3.5">
+              <div class="w-24 shrink-0 text-xs font-bold text-red-800 pt-0.5">13:30 – 15:00</div>
+              <div class="text-sm text-slate-700">
+                <p class="font-bold text-slate-900">大名庭園「縮景園」冬日漫步</p>
+                <p class="text-slate-600 mt-0.5">自飯店步行約 10 分鐘抵達（開放時間 09:00–17:00），沿濯纓池與跨虹橋欣賞松景與殘楓。</p>
+              </div>
+            </div>
+            <div class="flex gap-3.5 border-t border-slate-100 pt-3.5">
+              <div class="w-24 shrink-0 text-xs font-bold text-red-800 pt-0.5">15:15 – 16:45</div>
+              <div class="text-sm text-slate-700">
+                <p class="font-bold text-slate-900">廣島城天守閣 → 搭巴士返回廣島站</p>
+                <p class="text-slate-600 mt-0.5">由縮景園往西步行約 10 分鐘順遊毛利輝元修築之廣島城，遊畢搭乘廣島市內巴士（¥240）返回廣島站。</p>
+              </div>
+            </div>
+            <div class="flex gap-3.5 border-t border-slate-100 pt-3.5">
+              <div class="w-24 shrink-0 text-xs font-bold text-amber-700 pt-0.5">18:00 晚餐</div>
+              <div class="text-sm text-slate-700">
+                <p class="font-bold text-slate-900">かなわ（Kanawa）ekie 店｜廣島生牡蠣＆味噌土手鍋</p>
+                <p class="text-slate-600 mt-0.5">位於廣島站北口 1F ekie DINING，飯店下樓步行 2 分鐘即達（建議透過 TableCheck 線上預約）。</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Day 2 -->
+        <article data-day-card="day2" class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="bg-slate-900 text-white px-5 py-3.5 flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-3">
+              <span class="px-2.5 py-0.5 rounded bg-red-700 text-xs font-black">DAY 2</span>
+              <h4 class="font-bold text-base sm:text-lg">12/5 (週六)｜廣島市中心核心單日完走</h4>
+            </div>
+            <span class="text-xs text-amber-300 font-medium"><i class="fa-solid fa-yen-sign mr-1"></i>當日車資：¥480</span>
+          </div>
+          <div class="p-5 space-y-4">
+            <div class="flex gap-3.5">
+              <div class="w-24 shrink-0 text-xs font-bold text-red-800 pt-0.5">09:30 – 12:00</div>
+              <div class="text-sm text-slate-700">
+                <p class="font-bold text-slate-900">原爆圓頂屋 → 廣島和平紀念公園 → 和平紀念資料館</p>
+                <p class="text-slate-600 mt-0.5">搭乘廣島電鐵 2 號或 6 號線（單程 ¥240）至「原爆ドーム前」站下車，依序步行參訪世界遺產圓頂屋、慰靈碑與資料館（07:30 開放）。</p>
+              </div>
+            </div>
+            <div class="flex gap-3.5 border-t border-slate-100 pt-3.5">
+              <div class="w-24 shrink-0 text-xs font-bold text-red-800 pt-0.5">12:30 – 15:30</div>
+              <div class="text-sm text-slate-700">
+                <p class="font-bold text-slate-900">本通商店街午餐與藥妝伴手禮採買</p>
+                <p class="text-slate-600 mt-0.5">步行 3 分鐘進入全天候拱廊商店街，遮風避寒並集中採買藥妝與瀨戶內特產。</p>
+              </div>
+            </div>
+            <div class="flex gap-3.5 border-t border-slate-100 pt-3.5">
+              <div class="w-24 shrink-0 text-xs font-bold text-red-800 pt-0.5">16:00 – 17:30</div>
+              <div class="text-sm text-slate-700">
+                <p class="font-bold text-slate-900">廣島紙鶴塔（ORIZURU TOWER）日落全景</p>
+                <p class="text-slate-600 mt-0.5">營業至 18:00，於 16:00 登上頂樓「廣島之丘」木質展望台俯瞰 17:00 日落市景，隨後搭路面電車（¥240）返回廣島站。</p>
+              </div>
+            </div>
+            <div class="flex gap-3.5 border-t border-slate-100 pt-3.5">
+              <div class="w-24 shrink-0 text-xs font-bold text-amber-700 pt-0.5">18:30 晚餐</div>
+              <div class="text-sm text-slate-700">
+                <p class="font-bold text-slate-900">廣島赤燒えん 駅西本店（增量牡蠣廣島燒）或 電光石火</p>
+                <p class="text-slate-600 mt-0.5">赤燒えん週六營業（週日公休，可透過 Hot Pepper Gourmet 預約）；電光石火位於車站南口 Full Focus 6F（僅收現金與 PayPay）。</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Day 3 -->
+        <article data-day-card="day3" class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="bg-slate-900 text-white px-5 py-3.5 flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-3">
+              <span class="px-2.5 py-0.5 rounded bg-red-700 text-xs font-black">DAY 3</span>
+              <h4 class="font-bold text-base sm:text-lg">12/6 (週日)｜西軸延伸・山口岩國錦帶橋＆岩國城</h4>
+            </div>
+            <span class="text-xs text-amber-300 font-medium"><i class="fa-solid fa-yen-sign mr-1"></i>當日車資：¥2,140</span>
+          </div>
+          <div class="p-5 space-y-4">
+            <div class="flex gap-3.5">
+              <div class="w-24 shrink-0 text-xs font-bold text-red-800 pt-0.5">09:00 – 10:25</div>
+              <div class="text-sm text-slate-700">
+                <p class="font-bold text-slate-900">廣島站 → JR 山陽本線一車直達岩國站 → 轉乘巴士赴錦帶橋</p>
+                <p class="text-slate-600 mt-0.5">搭乘 JR 山陽本線直達電車（無需轉乘、車程約 49–51 分鐘、單程 ¥770），於岩國站西口轉乘いわくにバス（單程 ¥300、車程約 15–20 分鐘）直達錦帶橋。</p>
+              </div>
+            </div>
+            <div class="flex gap-3.5 border-t border-slate-100 pt-3.5">
+              <div class="w-24 shrink-0 text-xs font-bold text-red-800 pt-0.5">10:30 – 14:30</div>
+              <div class="text-sm text-slate-700">
+                <p class="font-bold text-slate-900">錦帶橋五連木造拱橋 → 岩國城纜車＆天守閣</p>
+                <p class="text-slate-600 mt-0.5">於橋頭購買「錦帶橋＋岩國城纜車＋岩國城」套票（成人 ¥1,550，比分開購票省 ¥200），走過日本三大名橋後搭纜車（09:00–17:00）登頂岩國城天守閣（09:00–16:45），午餐品嚐岩國壽司與蓮根料理。</p>
+              </div>
+            </div>
+            <div class="flex gap-3.5 border-t border-slate-100 pt-3.5">
+              <div class="w-24 shrink-0 text-xs font-bold text-red-800 pt-0.5">15:00 – 16:15</div>
+              <div class="text-sm text-slate-700">
+                <p class="font-bold text-slate-900">原線巴士（¥300）＋ JR 山陽本線（¥770）返回廣島站</p>
+                <p class="text-slate-600 mt-0.5">傍晚返回廣島站 ekie 商場自由晚餐與逛街。</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Day 4 -->
+        <article data-day-card="day4" class="bg-white rounded-2xl border-2 border-red-800/30 shadow-sm overflow-hidden">
+          <div class="bg-red-900 text-white px-5 py-3.5 flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-3">
+              <span class="px-2.5 py-0.5 rounded bg-amber-400 text-slate-950 text-xs font-black">DAY 4 大潮日</span>
+              <h4 class="font-bold text-base sm:text-lg">12/7 (週一)｜宮島海上社殿絕景・彌山纜車＆星鰻飯</h4>
+            </div>
+            <span class="text-xs text-amber-200 font-medium"><i class="fa-solid fa-yen-sign mr-1"></i>當日車資：¥1,340</span>
+          </div>
+          <div class="p-5 space-y-4">
+            <div class="flex gap-3.5">
+              <div class="w-24 shrink-0 text-xs font-bold text-red-800 pt-0.5">07:45 – 08:45</div>
+              <div class="text-sm text-slate-700">
+                <p class="font-bold text-slate-900">廣島站 → JR 宮島口 → JR 西日本宮島渡輪登島</p>
+                <p class="text-slate-600 mt-0.5">搭乘 JR 山陽本線至宮島口站（車程 28 分鐘、單程 ¥420），轉乘 JR 西日本宮島渡輪（船程 10 分鐘、單程 ¥200＋宮島訪問稅 ¥100），準時於滿潮前登島。</p>
+              </div>
+            </div>
+            <div class="flex gap-3.5 border-t border-slate-100 pt-3.5">
+              <div class="w-24 shrink-0 text-xs font-bold text-red-800 pt-0.5">08:45 – 11:00</div>
+              <div class="text-sm text-slate-700">
+                <p class="font-bold text-slate-900">嚴島神社（08:48 滿潮 329 cm 海上社殿巔峰）</p>
+                <p class="text-slate-600 mt-0.5">06:30 即開放參拜。此時大潮潮位達 329 cm（遠高於 250 cm 海上社殿基準），海水完全覆蓋沙洲，捕捉朱紅迴廊與大鳥居漂浮海面的經典畫面。</p>
+              </div>
+            </div>
+            <div class="flex gap-3.5 border-t border-slate-100 pt-3.5">
+              <div class="w-24 shrink-0 text-xs font-bold text-red-800 pt-0.5">11:15 – 14:30</div>
+              <div class="text-sm text-slate-700">
+                <p class="font-bold text-slate-900">宮島纜車登彌山獅子岩站 → 表參道商店街美食</p>
+                <p class="text-slate-600 mt-0.5">穿過紅葉谷公園搭乘宮島纜車（營運時間 09:00–16:00）遠眺瀨戶內海群島，下山後於表參道品嚐現烤廣島牡蠣與炸紅葉饅頭。</p>
+              </div>
+            </div>
+            <div class="flex gap-3.5 border-t border-slate-100 pt-3.5">
+              <div class="w-24 shrink-0 text-xs font-bold text-amber-700 pt-0.5">15:30 – 17:00</div>
+              <div class="text-sm text-slate-700">
+                <p class="font-bold text-slate-900">宮島口百年老舖「あなごめし うえの（上野商店）」星鰻飯</p>
+                <p class="text-slate-600 mt-0.5">搭渡輪（¥200）返回宮島口享用招牌炭烤星鰻飯（週一營業至 18:30），餐後搭乘 JR 山陽本線（¥420）返回廣島站。</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Day 5 -->
+        <article data-day-card="day5" class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="bg-slate-900 text-white px-5 py-3.5 flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-3">
+              <span class="px-2.5 py-0.5 rounded bg-red-700 text-xs font-black">DAY 5</span>
+              <h4 class="font-bold text-base sm:text-lg">12/8 (週二)｜飯店退房 → 利木津巴士返台</h4>
+            </div>
+            <span class="text-xs text-amber-300 font-medium"><i class="fa-solid fa-yen-sign mr-1"></i>當日車資：¥1,500</span>
+          </div>
+          <div class="p-5 space-y-4">
+            <div class="flex gap-3.5">
+              <div class="w-24 shrink-0 text-xs font-bold text-red-800 pt-0.5">07:45 – 09:20</div>
+              <div class="text-sm text-slate-700">
+                <p class="font-bold text-slate-900">廣島格蘭比亞酒店退房 → 新幹線口 5 號月台搭利木津巴士</p>
+                <p class="text-slate-600 mt-0.5">搭乘 08:15（09:05 抵達機場）或 08:30（09:20 抵達機場）利木津巴士（¥1,500）前往廣島機場。</p>
+              </div>
+            </div>
+            <div class="flex gap-3.5 border-t border-slate-100 pt-3.5">
+              <div class="w-24 shrink-0 text-xs font-bold text-red-800 pt-0.5">09:20 – 13:25</div>
+              <div class="text-sm text-slate-700">
+                <p class="font-bold text-slate-900">辦理華航 CI113 登機手續 → 11:25 起飛返抵桃園機場</p>
+                <p class="text-slate-600 mt-0.5">13:25 抵達台北桃園機場，圓滿結束廣島五天四夜旅程。</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Section 2: Miyajima Tide Table -->
+    <section id="tide" class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 sm:p-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-sky-700">Miyajima Tide Forecast</span>
+          <h3 class="text-xl font-bold text-slate-900">2026 年 12 月宮島潮汐對照表（單位：cm）</h3>
+        </div>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 text-sky-800 border border-sky-200 text-xs font-bold">
+          <i class="fa-solid fa-circle-info"></i> 基準：&gt;250cm 海上社殿｜&lt;100cm 步行至鳥居下
+        </span>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-100 text-slate-700 border-b border-slate-200 text-xs">
+              <th class="py-2.5 px-3 font-bold">日期</th>
+              <th class="py-2.5 px-3 font-bold">潮種</th>
+              <th class="py-2.5 px-3 font-bold">上午滿潮</th>
+              <th class="py-2.5 px-3 font-bold">傍晚滿潮</th>
+              <th class="py-2.5 px-3 font-bold">凌晨干潮</th>
+              <th class="py-2.5 px-3 font-bold">午後干潮</th>
+              <th class="py-2.5 px-3 font-bold">行程判讀</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-xs sm:text-sm">
+            <tr>
+              <td class="py-2.5 px-3 font-bold">12/4 (五)</td>
+              <td class="py-2.5 px-3">若潮</td>
+              <td class="py-2.5 px-3">06:19 (273)</td>
+              <td class="py-2.5 px-3">18:17 (288)</td>
+              <td class="py-2.5 px-3 text-slate-400">—</td>
+              <td class="py-2.5 px-3">12:12 (131)</td>
+              <td class="py-2.5 px-3 text-slate-500">抵達日</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-bold">12/5 (六)</td>
+              <td class="py-2.5 px-3">中潮</td>
+              <td class="py-2.5 px-3">07:18 (295)</td>
+              <td class="py-2.5 px-3">19:04 (289)</td>
+              <td class="py-2.5 px-3">00:48 (73)</td>
+              <td class="py-2.5 px-3">13:13 (132)</td>
+              <td class="py-2.5 px-3 text-slate-500">週末人潮多</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-bold">12/6 (日)</td>
+              <td class="py-2.5 px-3">中潮</td>
+              <td class="py-2.5 px-3">08:06 (314)</td>
+              <td class="py-2.5 px-3">19:44 (290)</td>
+              <td class="py-2.5 px-3">01:32 (52)</td>
+              <td class="py-2.5 px-3">14:03 (129)</td>
+              <td class="py-2.5 px-3 text-slate-500">安排岩國錦帶橋</td>
+            </tr>
+            <tr class="bg-red-50/80 font-bold text-red-950">
+              <td class="py-3 px-3">12/7 (一) ★</td>
+              <td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-red-800 text-white text-xs">大潮</span></td>
+              <td class="py-3 px-3 text-red-800">08:48 (329)</td>
+              <td class="py-3 px-3">20:21 (291)</td>
+              <td class="py-3 px-3">02:12 (36)</td>
+              <td class="py-3 px-3">14:46 (127)</td>
+              <td class="py-3 px-3 text-red-800">最佳登島日（海上社殿）</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-bold">12/8 (二)</td>
+              <td class="py-2.5 px-3">大潮</td>
+              <td class="py-2.5 px-3">09:26 (337)</td>
+              <td class="py-2.5 px-3">20:55 (292)</td>
+              <td class="py-2.5 px-3">02:48 (25)</td>
+              <td class="py-2.5 px-3">15:24 (125)</td>
+              <td class="py-2.5 px-3 text-slate-500">早班機返台</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 3: Transit Fare Breakdown -->
+    <section id="budget" class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 sm:p-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-700">Transit Budget</span>
+          <h3 class="text-xl font-bold text-slate-900">五日交通車資精算表（Apple Pay Suica 直刷）</h3>
+        </div>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-bold">
+          <i class="fa-solid fa-check-circle"></i> 結論：無需購買任何周遊券或一日券
+        </span>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-100 text-slate-700 border-b border-slate-200 text-xs">
+              <th class="py-2.5 px-3 font-bold">行程日</th>
+              <th class="py-2.5 px-3 font-bold">交通工具與路段明細</th>
+              <th class="py-2.5 px-3 font-bold text-right">單日小計</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-xs sm:text-sm">
+            <tr>
+              <td class="py-2.5 px-3 font-bold whitespace-nowrap">Day 1 (12/4)</td>
+              <td class="py-2.5 px-3 text-slate-700">廣島機場 → 廣島站利木津巴士 (¥1,500) ＋ 廣島城回程市內巴士 (¥240)</td>
+              <td class="py-2.5 px-3 font-bold text-right">¥1,740</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-bold whitespace-nowrap">Day 2 (12/5)</td>
+              <td class="py-2.5 px-3 text-slate-700">廣島電鐵市內線往返（單程 ¥240 × 2 趟，比買 ¥700 一日券再省 ¥220）</td>
+              <td class="py-2.5 px-3 font-bold text-right">¥480</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-bold whitespace-nowrap">Day 3 (12/6)</td>
+              <td class="py-2.5 px-3 text-slate-700">JR 山陽本線廣島 ⇄ 岩國往返 (¥770 × 2) ＋ いわくにバス往返 (¥300 × 2)</td>
+              <td class="py-2.5 px-3 font-bold text-right">¥2,140</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-bold whitespace-nowrap">Day 4 (12/7)</td>
+              <td class="py-2.5 px-3 text-slate-700">JR 廣島 ⇄ 宮島口往返 (¥420 × 2) ＋ JR 渡輪往返 (¥200 × 2) ＋ 宮島訪問稅 (¥100)</td>
+              <td class="py-2.5 px-3 font-bold text-right">¥1,340</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-bold whitespace-nowrap">Day 5 (12/8)</td>
+              <td class="py-2.5 px-3 text-slate-700">廣島站新幹線口 → 廣島機場利木津巴士 (¥1,500)</td>
+              <td class="py-2.5 px-3 font-bold text-right">¥1,500</td>
+            </tr>
+            <tr class="bg-slate-900 text-white font-bold">
+              <td class="py-3 px-3" colspan="2">五日全行程交通費總計（全線支援 iPhone / Apple Watch Suica 感應）</td>
+              <td class="py-3 px-3 text-right text-amber-300 text-base">¥7,200</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 4: Dining & Reservations -->
+    <section id="dining">
+      <div class="mb-5">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-700">Dining & Reservations</span>
+        <h3 class="text-xl sm:text-2xl font-bold text-slate-900">廣島站周邊可預約名店＆老舖清單</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Restaurant 1 -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded bg-amber-100 text-amber-900 text-xs font-bold">Day 1 推薦｜牡蠣老舖</span>
+              <span class="text-xs text-slate-500">廣島站北口 ekie 1F</span>
+            </div>
+            <h4 class="text-lg font-bold text-slate-900">かなわ（Kanawa）ekie 店</h4>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">創業於 1867 年的廣島牡蠣名店，飯店下樓步行 2 分鐘即達。看板料理為生食級帶殼牡蠣、炸大牡蠣套餐與味噌牡蠣土手鍋。</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-xs space-y-1 text-slate-600">
+            <p><strong class="text-slate-800">營業時間：</strong>11:00–14:30、16:30–21:00（部分公告至 22:00）</p>
+            <p><strong class="text-slate-800">預約方式：</strong>TableCheck 24H 線上訂位（接受 1 人）｜<span class="font-mono">+81-82-236-3880</span></p>
+          </div>
+        </div>
+
+        <!-- Restaurant 2 -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded bg-red-100 text-red-900 text-xs font-bold">Day 2 推薦｜牡蠣廣島燒</span>
+              <span class="text-xs text-slate-500">廣島站南口 EKINISHI</span>
+            </div>
+            <h4 class="text-lg font-bold text-slate-900">廣島赤燒えん 駅西本店</h4>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">位於車站南口懷舊美食街，步行 3–4 分鐘。看板料理為鋪滿整圈奶油香煎廣島牡蠣的「增量牡蠣廣島燒（マシマシ牡蠣）」。</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-xs space-y-1 text-slate-600">
+            <p><strong class="text-slate-800">營業時間：</strong>週一至週六 17:30–20:30（<strong>週日固定公休</strong>）</p>
+            <p><strong class="text-slate-800">預約方式：</strong>Hot Pepper Gourmet 線上訂位｜<span class="font-mono">+81-82-569-8873</span></p>
+          </div>
+        </div>
+
+        <!-- Restaurant 3 -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded bg-slate-100 text-slate-800 text-xs font-bold">米其林必比登推介</span>
+              <span class="text-xs text-slate-500">Full Focus 大樓 6F</span>
+            </div>
+            <h4 class="text-lg font-bold text-slate-900">廣島燒 電光石火 站前廣場店</h4>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">以蓬鬆蛋皮包裹高麗菜、新鮮紫蘇葉與雙倍蛋的圓頂廣島燒聞名。<strong>注意：本店不收信用卡，僅接受現金或 PayPay。</strong></p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-xs space-y-1 text-slate-600">
+            <p><strong class="text-slate-800">營業時間：</strong>每日 10:00–23:00（L.O. 22:30，全年無休）</p>
+            <p><strong class="text-slate-800">預約方式：</strong>官網線上訂位（最晚用餐前 1 小時）｜<span class="font-mono">+81-82-568-7851</span></p>
+          </div>
+        </div>
+
+        <!-- Restaurant 4 -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded bg-amber-100 text-amber-900 text-xs font-bold">Day 4 推薦｜百年星鰻飯</span>
+              <span class="text-xs text-slate-500">JR 宮島口站步行 2 分鐘</span>
+            </div>
+            <h4 class="text-lg font-bold text-slate-900">あなごめし うえの（上野商店）</h4>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">明治 34 年創業老舖，以星鰻魚骨高湯炊煮米飯並刷醬炭烤星鰻，推薦於 Day 4 午後搭渡輪返回宮島口時享用。</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-xs space-y-1 text-slate-600">
+            <p><strong class="text-slate-800">營業時間：</strong>週一 10:00–18:30（週三僅販售便當外帶）</p>
+            <p><strong class="text-slate-800">電話洽詢：</strong><span class="font-mono">+81-829-56-0006</span>（現場登記候位）</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Interactive Pre-trip Checklist -->
+    <section id="checklist" class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 sm:p-6">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Interactive Checklist</span>
+          <h3 class="text-xl font-bold text-slate-900">行前準備檢核表（自動儲存於瀏覽器）</h3>
+        </div>
+        <button onclick="resetChecklist()" class="text-xs text-slate-500 hover:text-red-800 underline">重設勾選</button>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm" id="checklist-items">
+        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer">
+          <input type="checkbox" data-check-id="suica" class="w-4 h-4 accent-red-800 rounded" />
+          <span>Apple Pay Suica 儲值至少 ¥8,000 日圓</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer">
+          <input type="checkbox" data-check-id="kanawa" class="w-4 h-4 accent-red-800 rounded" />
+          <span>TableCheck 預約 12/4 晚餐「かなわ ekie店」</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer">
+          <input type="checkbox" data-check-id="okonomi" class="w-4 h-4 accent-red-800 rounded" />
+          <span>預約 12/5 晚餐「廣島赤燒えん 駅西本店」</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer">
+          <input type="checkbox" data-check-id="vjw" class="w-4 h-4 accent-red-800 rounded" />
+          <span>填寫 Visit Japan Web 入境與海關申報 QR Code</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer">
+          <input type="checkbox" data-check-id="cash" class="w-4 h-4 accent-red-800 rounded" />
+          <span>備妥日圓現鈔（錦帶橋套票 ¥1,550、宮島訪問稅 ¥100）</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer">
+          <input type="checkbox" data-check-id="esim" class="w-4 h-4 accent-red-800 rounded" />
+          <span>開通日本漫遊 / eSIM 網路方案</span>
+        </label>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 text-xs py-8 mt-12">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p>2026 Hiroshima Travel Guide｜基於官方潮汐表、JR 西日本與廣島機場時刻編製</p>
+      <p>Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script>
+    // Day Tab Filter Logic
+    function filterDay(day) {
+      const tabs = document.querySelectorAll('.day-tab');
+      tabs.forEach(tab => {
+        if (tab.dataset.day === day) {
+          tab.classList.add('tab-active');
+          tab.classList.remove('bg-white', 'text-slate-700');
+        } else {
+          tab.classList.remove('tab-active');
+          tab.classList.add('bg-white', 'text-slate-700');
+        }
+      });
+
+      const cards = document.querySelectorAll('[data-day-card]');
+      cards.forEach(card => {
+        if (day === 'all' || card.dataset.dayCard === day) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // LocalStorage Checklist Persistence
+    const STORAGE_KEY = 'hiroshima_2026_checklist_v1';
+
+    function loadChecklist() {
+      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+      document.querySelectorAll('[data-check-id]').forEach(checkbox => {
+        const id = checkbox.dataset.checkId;
+        checkbox.checked = Boolean(saved[id]);
+        checkbox.addEventListener('change', () => {
+          saved[id] = checkbox.checked;
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
+        });
+      });
+    }
+
+    function resetChecklist() {
+      localStorage.removeItem(STORAGE_KEY);
+      document.querySelectorAll('[data-check-id]').forEach(cb => {
+        cb.checked = false;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', loadChecklist);
+  </script>
+</body>
+</html>
